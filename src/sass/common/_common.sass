@@ -1,0 +1,200 @@
+html,body
+  overflow-x: hidden
+
+html
+  --plyr-color-main: #2f4c6a
+  --plyr-badge-background: #2f4c6a
+  --plyr-tab-focus-color: transparent
+  --plyr-control-radius: 30px
+  --plyr-control-spacing: 16px
+  --plyr-range-thumb-background: #2f4c6a
+  --plyr-audio-range-track-background: #c9b262
+  --plyr-audio-controls-background: transparent
+  
+
+.plyr__volume
+  width: 30%
+  max-width: 200px
+.plyr--full-ui input[type=range]
+  color: #6a6a6a
+
+input[type=range]::-webkit-slider-thumb:after
+  background: red
+
+#header
+  #mainMenu
+    +pad 
+      display: none
+      &.show
+        display: flex
+
+  .menu
+    .subMenu
+      display: none
+      a
+        position: relative
+        +pad
+          text-align: center
+
+        &:before
+          content: ''
+          +bg('arr-right-sm.png')
+          position: absolute
+          left: -10px
+          top: 10px
+          opacity: 0
+            
+        &:hover
+          &:before
+            left: -4px
+            opacity: 1
+            +dTime(.1s)
+
+    >li:hover
+      .subMenu
+        display: block
+
+.slider
+  padding: 0 40px
+  .slick-list
+    padding-top: 15px
+    padding-bottom: 15px
+  .slick-next
+    &::before
+      display: none
+    +bg('arr-right.png')
+    right: 0px
+  .slick-prev
+    &::before
+      display: none
+    +bg('arr-left.png')
+    left: 0px
+  .slick-dots
+    left: 0
+
+
+
+#calendar
+  width: 50%  
+  font-family: "Arial"
+  +pad
+    width: 100%
+
+  
+  .cld-main
+    width: 100%
+    background-color: #fff
+    border-radius: 8px
+    border: 1px solid #dcdcdc
+    overflow: hidden
+    .cld-datetime
+      width: 100%
+      max-width: none
+      background-color: #ec6c45
+      font-size: 22px
+      color: #fff
+      padding: 8px 16px
+      text-transform: uppercase
+      .cld-nav
+        margin-top: 8px
+  
+      svg
+        fill: #fff
+    .cld-labels
+      padding: 8px 0px
+      .cld-label
+        color: #2f4c6a
+        font-weight: bold
+        &:first-child
+          color: #ec6941
+        &:last-child
+          color: #ec6941
+  .cld-day
+    &.today 
+      .cld-number
+        width: 32px
+        height: 32px
+        background-color: #c9b262
+  .cld-number.eventday
+    width: 32px
+    height: 32px
+    border: 0
+    background-color: #f4f0e0
+
+  .cld-title
+    display: none
+
+
+.add-bg
+  position: relative
+  &.bg-1
+    &::after
+      content: ''
+      +bg('bg-1.png')
+      position: absolute
+      left: 50%
+      top: 0
+      transform: translate(290px, -150px)
+      z-index: -1
+  &.bg-2
+    &::before
+      content: ''
+      +bg('bg-2.png')
+      position: absolute
+      left: 50%
+      top: 0
+      transform: translate(-100%, 100px)
+      margin-left: -300px
+      z-index: -1
+  
+  &.bg-3
+    &::before
+      content: ''
+      +bg('bg-3.png')
+      position: absolute
+      left: 50%
+      top: 0
+      transform: translate(-50%, 0px)
+      z-index: -1
+
+
+  &.bg-4
+    &::after
+      content: ''
+      +bg('bg-4.png')
+      position: absolute
+      left: 50%
+      top: 0
+      transform: translate(290px, -150px)
+      z-index: -1
+  &.bg-5
+    &::before
+      content: ''
+      +bg('bg-5.png')
+      position: absolute
+      left: 50%
+      top: 0
+      transform: translate(-100%, 100px)
+      margin-left: -300px
+      z-index: -1
+
+  &.bg-6
+    &::before
+      content: ''
+      +bg('bg-6.png')
+      position: absolute
+      left: 50%
+      bottom: 0
+      transform: translate(-50%, 0px)
+      z-index: -1
+
+
+.topBtn
+  position: fixed
+  right: 25px
+  bottom: 137px
+  z-index: 30
+  cursor: pointer
+  +dTime
+  &:hover
+    transform: scale(.95)

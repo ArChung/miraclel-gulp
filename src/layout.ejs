@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> <%- title %> </title>
+  <!-- hiding the Browser’s User Interface -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- iOS 6 -->
+  <meta name="apple-mobile-web-app-title" content="">
+  <!-- meta start -->
+  <meta name="title" content="<%- title %>" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="copyright" content="" />
+  <link rel="image_src" href="" />
+
+  <!-- OG -->
+  <meta property="og:title" content="<%- title %>" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <meta property="fb:app_id" content="" />
+  <!-- CSS -->
+  <!-- build:css css/lib.css -->
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+  <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+  <!-- sider -->
+  <% include conponents/sider %>
+  <!-- sider END-->
+
+  <!-- navbar -->
+  <% include conponents/header %>
+  <!-- navbar END -->
+
+  <%- contents %>
+
+  <!-- footer -->
+  <% include conponents/footer %>
+  <!-- footer END -->
+
+
+  <div class="topBtn">
+    <img src="./images/topBtn.png" alt="">
+  </div>
+
+  <script>
+    // topBtn
+    $('.topBtn').click(function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // searchBtn
+    $('#searchBtn').click(function(){
+      $('#searchBar').toggleClass('hidden');
+    });
+
+    $('#searchBar .clozBtn').click(function(){
+      $('#searchBar').toggleClass('hidden');
+    });
+
+
+    // moblie menu
+    $('#m_menuBtn').click(function(){
+      $('#mainMenu').toggleClass('show');
+    });
+
+    $('#mainMenu .clozBtn').click(function(){
+      $('#mainMenu').toggleClass('show');
+    });
+  </script>
+</body>
+
+</html>
