@@ -1,4 +1,6 @@
 // index.sass
+.ratio-300-230
+  +ratio(300,250)
 
 #index
   +bgi('index.png')
@@ -73,9 +75,15 @@
       +dTime
 
 
+#calendar-section
+  .txtBox
+    > *
+      padding: 9px 15px
 
-
-
+.hoverUp
+  +dTime
+  &:hover
+    transform: translate(0, -12px)
 
     
 

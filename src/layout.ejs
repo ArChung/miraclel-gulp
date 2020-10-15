@@ -63,27 +63,48 @@
   <script>
     // topBtn
     $('.topBtn').click(function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
 
     // searchBtn
-    $('#searchBtn').click(function(){
+    $('#searchBtn').click(function () {
       $('#searchBar').toggleClass('hidden');
     });
 
-    $('#searchBar .clozBtn').click(function(){
+    $('#searchBar .clozBtn').click(function () {
       $('#searchBar').toggleClass('hidden');
     });
 
 
     // moblie menu
-    $('#m_menuBtn').click(function(){
+    $('#m_menuBtn').click(function () {
       $('#mainMenu').toggleClass('show');
     });
 
-    $('#mainMenu .clozBtn').click(function(){
+    $('#mainMenu').click(function () {
       $('#mainMenu').toggleClass('show');
     });
+
+    $(window).on('scroll', function () {
+      const pos = typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement
+        .scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
+
+      if (pos > 500) {
+        $('#header').addClass('bg-1');
+        $('.topBtn').removeClass('hidden');
+      } else {
+        $('#header').removeClass('bg-1');
+        $('.topBtn').addClass('hidden');
+      }
+
+      console.log(pos);
+    })
+
+
+    // header
   </script>
 </body>
 

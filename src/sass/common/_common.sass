@@ -22,11 +22,22 @@ input[type=range]::-webkit-slider-thumb:after
   background: red
 
 #header
+  +dTime
+  background-position: 50% 140px
   #mainMenu
     +pad 
       display: none
+      .menuInnerContainer
+        +dTime
+        transform: translate(-100%, 0)
       &.show
-        display: flex
+        display: block
+        .menuInnerContainer
+          transform: translate(0%, 0)
+          
+  &.bg-1
+    +bgi('index.png')
+    background-color: rgba(white,.9)
 
   .menu
     .subMenu
@@ -136,6 +147,9 @@ input[type=range]::-webkit-slider-thumb:after
       top: 0
       transform: translate(290px, -150px)
       z-index: -1
+      +pad
+        transform: translate(100px, -330px)
+
   &.bg-2
     &::before
       content: ''
@@ -146,6 +160,8 @@ input[type=range]::-webkit-slider-thumb:after
       transform: translate(-100%, 100px)
       margin-left: -300px
       z-index: -1
+      +pad
+        transform: translate(-82%, 100px)
   
   &.bg-3
     &::before
@@ -167,6 +183,8 @@ input[type=range]::-webkit-slider-thumb:after
       top: 0
       transform: translate(290px, -150px)
       z-index: -1
+      +pad
+        transform: translate(120px, -100px)
   &.bg-5
     &::before
       content: ''
@@ -177,6 +195,8 @@ input[type=range]::-webkit-slider-thumb:after
       transform: translate(-100%, 100px)
       margin-left: -300px
       z-index: -1
+      +pad
+        transform: translate(-80%, 190px)
 
   &.bg-6
     &::before
