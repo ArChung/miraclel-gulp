@@ -15,6 +15,7 @@ import imageminZopfli from "imagemin-zopfli"
 import imageminMozjpeg from "imagemin-mozjpeg" //need to run 'brew install libpng'
 import imageminGiflossy from "imagemin-giflossy"
 import tailwindconfig from "./tailwind.config"
+import purgecss from "gulp-purgecss"
 
 const $ = require("gulp-load-plugins")()
 
@@ -93,6 +94,13 @@ export function ejs() {
 /*****************************************************
  * CSS 處理 block
  *****************************************************/
+
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-z0-9-:\/]+/g);
+  }
+}
+
 export function sass() {
 
   const plugins = [
@@ -114,6 +122,11 @@ export function sass() {
       }).on("error", $.sass.logError)
     )
     .pipe($.postcss(plugins))
+    // .pipe(
+    //   purgecss({
+    //         content: ['public/**/*.html']
+    //     })
+    // )
     .pipe($.if(envIsPro, $.cleanCss()))
     .pipe($.sourcemaps.write("."))
     .pipe(gulp.dest("./public/css"))
@@ -265,6 +278,8 @@ exports.buildPro = gulp.series(
   },
   gulp.series(goSassImage, clean, copy),
   gulp.parallel(babel, sass, ejs, imageMin)
+  // gulp.series(goSassImage, clean, copy,gulp.parallel(babel,  ejs, imageMin),sass)
+  // gulp.parallel(babel, sass, ejs, imageMin)
 )
 
 function deploy() {
