@@ -276,7 +276,7 @@ exports.buildPro = gulp.series(
     envIsPro = true
     cb()
   },
-  gulp.series(goSassImage, clean, copy),
+  gulp.series(envNow,goSassImage, clean, copy),
   gulp.parallel(babel, sass, ejs, imageMin)
   // gulp.series(goSassImage, clean, copy,gulp.parallel(babel,  ejs, imageMin),sass)
   // gulp.parallel(babel, sass, ejs, imageMin)

@@ -12,6 +12,14 @@ html
   --plyr-audio-controls-background: transparent
   
 
+
+p
+  margin-top: 1rem
+  margin-bottom: 1rem
+
+// a:hover
+//   text-decoration: underline
+
 .plyr__volume
   width: 30%
   max-width: 200px
@@ -20,6 +28,55 @@ html
 
 input[type=range]::-webkit-slider-thumb:after
   background: red
+
+.max-w-800
+  max-width: 800px
+
+.btn-up
+  position: relative
+  +dTime
+  &:hover
+    transform: translate(0, -8px)
+  
+.ratio-300-230
+  +ratio(300,230)
+
+.ratio-2-1
+  +ratio(2,1)
+
+.icon
+  display: inline-block
+  vertical-align: text-top
+  &.fb-icon-btn
+    +bg('fb-icon.png')
+    margin-top: 1px
+  &.heart-icon-btn
+    +bg('heart-icon.png')
+    margin-top: 4px
+
+.sideline
+  position: relative
+  background-color: white
+  &::before
+    content: ''
+    position: absolute
+    width: calc( 50% - 30px )
+    top: 50%
+    left: 0
+    z-index: 0  
+    height: 2px
+    background-color: #f0edf6 
+    transform: translate(0%, -50%)
+  &::after
+    content: ''
+    position: absolute
+    width: calc( 50% - 30px )
+    top: 50%
+    right: 0
+    z-index: 0  
+    height: 2px
+    background-color: #f0edf6 
+    transform: translate(0%, -50%)
 
 #header
   +dTime
@@ -135,9 +192,41 @@ input[type=range]::-webkit-slider-thumb:after
   .cld-title
     display: none
 
+.table-style
+  overflow: hidden
+  .table-container
+    margin-right: -1px
+    margin-bottom: -1px
+    box-sizing: border-box
+    > *
+      border-right: 1px solid #dcdcdc
+      border-bottom: 1px solid #dcdcdc
+      box-sizing: border-box
+
+
+.list-disc1
+  li
+    padding-left: 1.5em
+    position: relative
+    &:before
+      content: ''
+      height: 5px
+      width: 5px
+      border-radius: 5px
+      position: absolute
+      background-color: #c9b262
+      top: 50%
+      left: .5em
+      transform: translate(0, -50%)
 
 .add-bg
   position: relative
+  &.bg-0
+    +bgi('bg0.jpg')
+    background-size: 100% 582px
+    background-repeat: no-repeat
+    
+
   &.bg-1
     &::after
       content: ''
@@ -207,6 +296,13 @@ input[type=range]::-webkit-slider-thumb:after
       bottom: 0
       transform: translate(-50%, 0px)
       z-index: -1
+    &.footer-2
+      &::before
+        +bg('bg-6-2.png')
+        transform: translate(-50%, -60px)
+
+
+      
 
 
 .topBtn

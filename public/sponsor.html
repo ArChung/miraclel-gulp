@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> 奇蹟網 | 贊助 </title>
+  <!-- hiding the Browser’s User Interface -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- iOS 6 -->
+  <meta name="apple-mobile-web-app-title" content="">
+  <!-- meta start -->
+  <meta name="title" content="奇蹟網 | 贊助" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="copyright" content="" />
+  <link rel="image_src" href="" />
+  <link rel="icon" type="image/png" href="./logo.png" />
+
+  <!-- OG -->
+  <meta property="og:title" content="奇蹟網 | 贊助" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <meta property="fb:app_id" content="" />
+  <!-- CSS -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+  <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+  <!-- sider -->
+  <!-- login : remove hidden class to show-->
+<div
+  class="popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 hidden">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+    <!-- clozBtn -->
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-center">會員登入</h2>
+      <hr class="text-gray-400 mt-4">
+      <div class="px-2 pt-4 md:px-48">
+        <a href="#" class='rounded-full  text-center text-white py-2 min-w-40 block my-4 hover:bg-opacity-75'
+          style="background-color: #4469b0;">
+          <i class="fb-icon-btn icon mr-2"></i> 快速註冊 / 登入
+        </a>
+        <div class="sideline text-center text-sm">OR</div>
+        <input type="email" name="emal" id="email" placeholder="Email / 帳號"
+          class='w-full mt-4 py-2 rounded-full px-4 border border-gray-400'>
+        <!-- border-red-600 & border-2 for error input -->
+        <input type="password" name="password" id="password" placeHolder="密碼"
+          class='w-full mt-4 py-2 rounded-full px-4 border-red-600 border-2'>
+        <div class="text-red-600 mt-1">*必填欄位</div>
+        <input type="submit" value="登入"
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
+
+        <div class="flex justify-center mt-4">
+          <a href="#" class='text-m-orange mx-2 hover:underline'>註冊會員</a>
+          <a href="#" class='text-m-orange mx-2 hover:underline'>忘記密碼</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- email sign up : remove hidden class to show-->
+<div
+  class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+    <!-- clozBtn -->
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-center">Email註冊</h2>
+      <hr class="text-gray-400 mt-4">
+      <div class="px-2 pt-4 md:px-48">
+        <input type="email" name="emal" id="email" placeholder="Email / 帳號"
+          class='w-full mt-4 py-2 rounded-full px-4 border border-gray-400'>
+        <input type="password" name="password" id="password" placeHolder="密碼"
+          class='w-full mt-4 py-2 rounded-full px-4 border border-gray-400'>
+        <input type="submit" value="註冊會員"
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
+
+        <div class="flex justify-center mt-4">
+          註冊會員代表您已詳閱並同意<a href="#" target='_blank' class="cursor-pointer text-m-orange hover:underline">隱私權政策</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- forget password : remove hidden class to show-->
+<div
+  class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-center">忘記密碼</h2>
+      <hr class="text-gray-400 mt-4">
+      <div class="px-2 md:px-32 text-center pt-4">請輸入您註冊時所填寫的e-mail，<br>
+        我們會立即發送密碼重新設定信到您的e-mail信箱。</div>
+      <div class="px-2 pt-4 md:px-48">
+        <input type="email" name="emal" id="email" placeholder="請輸入註冊時填寫的Email"
+          class='w-full py-2 rounded-full px-4 border border-gray-400'>
+        <input type="submit" value="確認"
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- password send : remove hidden class to show -->
+<div
+  class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-center">密碼發送</h2>
+      <hr class="text-gray-400 mt-4">
+      <div class="px-2 md:px-32 text-center pt-4">我們已將密碼重設信件寄至您的信箱
+        <span class="text-m-gold">staresky2009@gmail.com</span>，請您前往收取，謝謝。
+        為維護您的隱私及權益，信件連結將於密碼重設或24小時後失效。</div>
+      <div class="px-2 pt-4 md:px-48">
+        <input type="submit" value="確認"
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- lesson : remove hidden class to show -->
+<div
+  class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-center">密碼發送</h2>
+      <hr class="text-gray-400 mt-4">
+      <div class="px-2 pt-4 md:px-48">
+        <div class="flex justify-center items-center">
+          <div class='mr-4 text-lg'>課程進度</div>
+          <div class="relative">
+            <select
+              class="rounded-full block appearance-none w-full  border  text-gray-700 py-3 px-6 pr-16 leading-tight focus:outline-none focus:bg-white border-gray-500">
+              <option>第257課</option>
+              <option>第258課</option>
+              <option>第259課</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-2 md:px-32 pt-4">
+        <label class="flex items-start mt-4">
+          <input type="radio" class="mt-1 form-radio text-mainb border-mainb" name="accountType" value="personal">
+          <span class="ml-2">固定 (停留在上方設定的課程進度)</span>
+        </label>
+        <label class="flex items-start mt-4">
+          <input type="radio" class="mt-1 form-radio text-mainb border-mainb " name="accountType" value="personal">
+          <span class="ml-2">每天前進一課 (設定好課程進度，之後每日自動推進一課)</span>
+        </label>
+        <input type="submit" value="確認"
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-6 cursor-pointer hover:bg-opacity-75'>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- sider END-->
+
+  <!-- navbar -->
+  <header id='header' class='fixed w-full z-40 text-2xl lg:text-base'>
+  <div class="bg-white w-full z-50 bg-opacity-50">
+    <div class="container mx-auto py-1 flex text-mainb font-bold relative justify-between px-4">
+      <div class="flex items-center">
+        <a href="#">
+          <img src="./images/logo.png" alt="">
+        </a>
+        <div id='mainMenu'
+          class='text-3xl lg:text-base lg:items-center  w-full h-full fixed top-0 left-0 z-50 overflow-y-scroll bg-black bg-opacity-25 lg:bg-transparent lg:relative lg:overflow-y-visible '>
+          <div class='menuInnerContainer bg-m-gold w-2/3 lg:w-full lg:bg-transparent min-h-full flex lg:items-center pt-6 lg:pt-0'>
+            <!-- <div
+              class="clozBtn text-mainb absolute right-0 top-0 mr-8 mt-8 cursor-pointer hover:text-white duration-300 lg:hidden">
+              <svg class='fill-current w-20 h-20 lg:w-12  lg:h-12' xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div> -->
+            <ul class='flex items-center ml-4 menu  w-full  flex-col lg:flex-row' >
+              <li class='relative'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>關於奇蹟課程</a></li>
+              <li class='relative'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>最新消息</a></li>
+              <li class='relative'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>奇蹟專欄</a>
+                <div
+                  class='w-full  lg:w-auto lg:absolute text-gray-700 lg:border-t-8 whitespace-no-wrap lg:border-m-gold  lg:bg-white top-full left-0 z-50  subMenu px-3'>
+                  <div class="lg:inline-flex flex-col  p-4 flex-shrink-0">
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>若水</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>肯恩</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                  </div>
+                  <div class="lg:inline-flex flex-col  p-4 flex-shrink-0">
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>若水</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>肯恩</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                  </div>
+                  <div class="lg:inline-flex flex-col  p-4 flex-shrink-0">
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>若水若水若水若水</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>肯恩</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                  </div>
+                </div>
+              </li>
+              <li class='relative'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>出版品</a></li>
+              <li class='relative'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>奇蹟卡</a></li>
+              <li class='relative'>
+                <a href="#" class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>贊助我們</a>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+      <ul class='flex items-center menu '>
+        <li class='relative mr-1'>
+          <a href="#" class='  hover:text-m-gold p-2 flex items-center ' id='searchBtn'>
+            <svg class='fill-current w-8 h-8 lg:w-6 lg:h-6' viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+        <li class='relative mr-1'>
+          <a href="#" class='  hover:text-m-gold p-2 flex items-center'>
+            <svg class='fill-current w-8 h-8 lg:w-6 lg:h-6' viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <div
+            class='absolute text-gray-500 border-t-8 whitespace-no-wrap border-m-gold bg-white top-full right-0 z-50  subMenu px-3'>
+            <div class="inline-flex flex-col  p-4 flex-shrink-0">
+              <div><a href="#" class='py-1 px-4 block hover:text-mainb'>文章收藏</a></div>
+              <div><a href="#" class='py-1 px-4 block hover:text-mainb'>奇蹟卡收藏</a></div>
+              <div><a href="#" class='py-1 px-4 block hover:text-mainb'>每日一課設定</a></div>
+            </div>
+          </div>
+        </li>
+        <li class='relative mr-1'>
+          <a href="#" class='p-2 hover:text-m-gold flex items-center'>簡體</a>
+        </li>
+        <li class="relative lg:hidden" id='m_menuBtn'>
+          <a href="#" class=' mr-1 hover:text-m-gold p-2 flex items-center'>
+            <svg class='fill-current w-12 h-12' fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div id="searchBar" class='bg-m-gold w-full text-white hidden'>
+      <div class="container mx-auto py-2 px-4 flex items-center justify-center relative flex-col lg:flex-row ">
+        <div class="mr-4 py-5 lg:py-0">全站搜尋</div>
+        <div class="flex rounded-full max-w-xl w-full border overflow-hidden mr-4 ">
+          <input type="search" placeholder="輸入搜尋內容" class='w-full pl-6 text-black rounded-none'>
+          <input type="submit" value="搜尋"
+            class='bg-mainb text-white py-2 px-8 hover:bg-mainb-light cursor-pointer text-lg'>
+        </div>
+        <div class="my-5 lg:my-0">熱門：肯恩 正文 真寬恕 讀書會</div>
+        <div
+          class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 lg:top-auto lg:mt-0 lg:mr-0  cursor-pointer hover:text-white duration-300 ">
+          <svg class='fill-current w-12 h-12' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+      </div>
+    </div>
+</header>
+  <!-- navbar END -->
+
+  
+<!-- content -->
+<div class="w-full add-bg bg-0 pt-32 text-gray-900">
+  <div class="container mx-auto px-4">
+    <div class='flex'>
+      <a href="#" class="px-1">首頁</a>
+      <span>></span>
+      <a href="#" class="px-1">贊助奇蹟網站</a>
+    </div>
+    <h1 class="text-4xl text-center tracking-wide py-10">贊助奇蹟網站</h1>
+    <hr class="text-gray-400 border-t-2">
+    <div class="py-4 mx-auto max-w-800">
+      <div class="flex justify-between items-center mb-4">
+        <div>
+          <span class="text-m-gold mr-2">2018-02-24 20:22</span>
+          <span class='text-mainb'>by 奇蹟編輯</span>
+        </div>
+        <div class=" rounded-md flex px-4 py-2 items-center bg-gray-300">
+          <span>文字大小</span>
+          <div class="flex text-xl text-white">
+            <a href="#" class='bg-gray-500 rounded-full w-8 h-8 flex items-center justify-center ml-2'>小</a>
+            <a href="#"
+              class='bg-white text-mainb font-bold rounded-full w-8 h-8 flex items-center justify-center ml-2'>中</a>
+            <a href="#" class='bg-gray-500 rounded-full w-8 h-8 flex items-center justify-center ml-2'>大</a>
+          </div>
+        </div>
+      </div>
+      <img src="./images/demo3.png" alt="" class="rounded-md w-full">
+      <div class="px-2 leading-8">
+        <p class="text-lg text-mainb font-bold my-6">奇蹟是永不失落的。<br>
+          它會影響許許多多的人，即使是緣慳一面之人<br>
+          它甚至能不知不覺而且始料未及地轉變週遭的一切</p>
+        <p class="my-6">朋友，你若喜歡「奇蹟網站」的內容，表示我們的心靈在某一意識層次早已相通了。從而，我們才敢邀請你加入「贊助」的行列。</p>
+        <p class="my-6">「奇蹟網站」在奇蹟學員的群策群力之下，希望能以更專業的形式，提供更多元的服務；在此同時，我們急需維護網站及翻譯的人才，以及擴充硬體的經費。</p>
+        <p class="my-6">我們熱切期待你的贊助與支持，一起把寬恕的奇蹟訊息帶給更多仍在苦心追求心靈的平安與幸福的靈魂。</p>
+      </div>
+      <hr class="text-gray-400">
+      <div class="leading-7">
+        <div class="text-mainb font-bold text-lg mt-6">台灣地區 銀行轉帳</div>
+        <ul class="list-disc1">
+          <li>台新銀行 敦南分行（代號：812）</li>
+          <li>戶名：奇蹟課程有限公司</li>
+          <li>帳號：2002-01-0000230-0</li>
+        </ul>
+        <div class="text-mainb font-bold text-lg mt-6">若由海外匯入台灣台新銀行，英文資料如下：</div>
+        <ul class="list-disc1">
+          <li>銀行名稱：Taishin International Bank</li>
+          <li>
+            分行別：0023 Dunnan Branch
+          </li>
+          <li>
+            SWIFT Code：tsibtwtp
+          </li>
+          <li>
+            受款人姓名：A Course in Miracles Co.,Ltd.
+          </li>
+          <li>
+            受款人帳號：2002-01-0000230-0
+          </li>
+          <li>
+            受款人電話：+886-4-25364991
+          </li>
+          <li>
+            受款人地址：No.7,Aly,22,Ln.299,Sec.1,Xinxing Rd.,Tanzi Dist.,Taichung City 427,Taiwan</li>
+          </li>
+        </ul>
+        <div class="text-mainb font-bold text-lg mt-6">中國地區 銀行轉帳</div>
+        <ul class="list-disc1">
+          <li>
+            中国工商银行佛山顺德支行
+          </li>
+          <li>
+            账号：6212262013008205826
+          </li>
+          <li>
+            户名：刘巧玲
+          </li>
+        </ul>
+        <div class="text-mainb font-bold text-lg mt-6">美加歐地區 美金支票 </div>
+        <ul class="list-disc1">
+          <li>
+            美金支票：必須是"In American Dollars”
+          </li>
+          <li>
+            戶名：C. L. Cabanne
+          </li>
+          <li>
+            請將支票寄至C. L. Cabanne 3179 Stardust St. Rocklin, CA 95677 U.S.A.
+          </li>
+        </ul>
+        <div class="text-mainb font-bold text-lg mt-6">其他</div>
+        <p class='mt-1'>買書也能贊助奇蹟網站：<a href="#" class="text-m-orange hover:underline">點選此博客來專用連結購物</a>，可以回饋 1%-4%
+          不等的金額給網站喔～
+          你若願意以其他形式協助奇蹟網站，請與我們聯絡 <a href="mailto:staresky2009@gmail.com" class='text-m-gold'>staresky2009@gmail.com</a>
+        </p>
+        <hr class="text-gray-400 my-6">
+
+        若您選擇前四種方式贊肋，為方便核對您的捐款，請同時寄一封email至 <a href="mailto:staresky2009@gmail.com"
+          class='text-m-gold'>staresky2009@gmail.com</a>，<br>
+        註明下列事項：
+        <ul class="list-decimal pl-6">
+          <li>
+            款或轉帳日期（年月日）
+          </li>
+          <li>
+            電子郵件
+          </li>
+
+          <li>
+            贊助額度
+          </li>
+          <li>
+            贊助項目（若有特別要贊助的項目，如「ken影片計劃」，請註明。）
+          </li>
+          <li>
+            贊助方式（四選一）<br>
+            (台灣地區)國內轉帳、海外匯款、(中國地區)銀行轉帳、美加歐地區美金支票
+          </li>
+          <li>
+            姓名（您可自由選擇徵信錄上的署名方式）
+          </li>
+
+          <li>
+            性別 男 女
+          </li>
+          <li>
+            地址
+          </li>
+
+          <li>
+            聯絡電話 請一併註明手機、傳真
+          </li>
+
+          <li>
+            需否發票 是 否
+          </li>
+
+          <li>
+            您的轉帳號碼末五碼
+          </li>
+
+        </ul>
+        <br>
+        您的捐款入帳後，我們將與您確認，並於每月初公告上個月分之捐款明細，以茲徵信。線上讀書會的捐款另有專戶（線上共修專款專用），不包含在此公告之徵信錄中。
+        <hr class="text-gray-400 my-6">
+        <div class="font-bold">網站贊助徵信</div>
+        <div class="rounded-md border-gray-400 border mt-4  table-style">
+          <div class="table-container flex flex-wrap">
+            <div class="p-1 bg-m-gold text-white text-center w-full">2020</div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">ㄧ月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">二月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">三月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">四月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">五月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">六月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">七月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">八月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">九月</a></div>
+            <div class="py-2 text-gray-400 font-bold text-center w-1/6 ">十月</div>
+            <div class="py-2 text-gray-400 font-bold text-center w-1/6 ">十一月</div>
+            <div class="py-2 text-gray-400 font-bold text-center w-1/6 ">十二月</div>
+          </div>
+        </div>
+        <div class="rounded-md border-gray-400 border mt-4  table-style">
+          <div class="table-container flex flex-wrap">
+            <div class="p-1 bg-m-gold text-white text-center w-full">2019</div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">ㄧ月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">二月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">三月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">四月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">五月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">六月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">七月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">八月</a></div>
+            <div class="py-2 text-m-orange font-bold text-center w-1/6 "><a href="#">九月</a></div>
+            <div class="py-2  text-m-orange font-bold text-center w-1/6 "><a href="#">十月</a></div>
+            <div class="py-2  text-m-orange font-bold text-center w-1/6 "><a href="#">十一月</a></div>
+            <div class="py-2  text-m-orange font-bold text-center w-1/6 "><a href="#">十二月</a></div>
+          </div>
+        </div>
+        <hr class="text-gray-400 my-6">
+
+        <div class="font-bold text-xl">有學員詢問能否抵稅，我們一併回覆如下：</div>
+        <br>
+        我們歡迎各位以小額贊助的方式，讓這個特別為中文讀者所設立的教學網站及交流園地能持續運作下去。
+        由於奇蹟資訊中心沒有足夠的人力物力條件去申請成立為「公益法人」，為了合法的出版、流通中文相關的教學材料，不得不採用最簡單、最低條件的「合法成立一個最低資本額」的公司，以延續我們的服務，也因為如此，奇蹟資訊中心所開立的收據，無法用以抵稅，造成您的不便，還請見諒。
+        在此也感謝幾位多年來支持網站與翻譯工作的朋友們，你們的長期付出，讓海內外的奇蹟學員與讀者都能蒙受其利，謝謝你們！
+
+        <div class="mt-12 flex justify-center">
+          <div class="rounded-md py-1 px-4 text-white mx-2" style="background-color: #edcdc3;">#贊助</div>
+          <div class="rounded-md py-1 px-4 text-white mx-2" style="background-color: #edcdc3;">#捐款</div>
+        </div>
+
+        <div class="mt-12 flex justify-center">
+          <a href="#" class="btn-up rounded-full mx-2 inline-flex justify-center text-white py-2 text-xl"
+            style="background-color: #2d67be;min-width: 186px;">分享至FB</a>
+          <a href="#" class="btn-up rounded-full mx-2 inline-flex justify-center text-white py-2 text-xl"
+            style="background-color: #4caf50;min-width: 186px;">分享至LINE</a>
+          <a href="#" class="btn-up rounded-full mx-2 inline-flex justify-center text-white py-2 text-xl"
+            style="background-color: #af2f23;min-width: 186px;"><i class="icon heart-icon-btn mr-2"></i>收藏文章</a>
+        </div>
+      </div>
+      <hr class="text-gray-400 my-10">
+      <div class="text-center text-3xl tracking-wider">您可能也喜歡這些文章</div>
+
+      
+
+    </div>
+    <div class="slider slider-3">
+      <div class="slide-item hoverUp px-2">
+        <a href="#" class='block rounded-md shadow bg-white'>
+          <div class="pic bg-cover bg-center  ratio-2-1"
+            style='background-image: url(./images/demo4.png);'></div>
+          <div class="flex p-2 h-24 overflow-hidden my-1 lg:h-12  " style="min-height: 5rem;">
+            <h2 class="text-2xl  text-mainb lg:text-xl">不帶評判地看著自己的評判</h2>
+          </div>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-2">
+        <a href="#" class='block rounded-md shadow bg-white'>
+          <div class="pic bg-cover bg-center  ratio-2-1"
+            style='background-image: url(./images/demo4.png);'></div>
+          <div class="flex p-2 h-24 overflow-hidden my-1 lg:h-12  " style="min-height: 5rem;">
+            <h2 class="text-2xl  text-mainb lg:text-xl">不帶評判地看著自己的評判</h2>
+          </div>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-2">
+        <a href="#" class='block rounded-md shadow bg-white'>
+          <div class="pic bg-cover bg-center  ratio-2-1"
+            style='background-image: url(./images/demo4.png);'></div>
+          <div class="flex p-2 h-24 overflow-hidden my-1 lg:h-12  " style="min-height: 5rem;">
+            <h2 class="text-2xl  text-mainb lg:text-xl">到底該怎麼做？我怎麼才能「與祂進入神聖一刻」?
+            </h2>
+          </div>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-2">
+        <a href="#" class='block rounded-md shadow bg-white'>
+          <div class="pic bg-cover bg-center  ratio-2-1"
+            style='background-image: url(./images/demo4.png);'></div>
+          <div class="flex p-2 h-24 overflow-hidden my-1 lg:h-12  " style="min-height: 5rem;">
+            <h2 class="text-2xl  text-mainb lg:text-xl">不帶評判地看著自己的評判</h2>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  $('.slider-3').each(function () {
+    var t = $(this);
+    t.slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+
+        }
+      }, ]
+    });
+  })
+</script>
+
+  <!-- footer -->
+  <footer class="footer mt-32 add-bg bg-6 footer-2">
+
+  <div class="flex justify-center">
+    <a href="#" class='block mx-3 hover:opacity-75'>
+      <img src="./images/fbBtn.png" alt="fbBtn">
+    </a>
+    <a href="#" class='block mx-3 hover:opacity-75'>
+      <img src="./images/youtubeBtn.png" alt="youtubeBtn">
+    </a>
+    <a href="#" class='block mx-3 hover:opacity-75'>
+      <img src="./images/lineBtn.png" alt="lineBtn">
+    </a>
+  </div>
+  <div class="mt-8 flex justify-center rounded-full max-w-xl  mx-auto border overflow-hidden">
+    <input type="email" placeholder="輸入Email 訂閱電子報" class='w-full pl-6'>
+    <input type="submit" value="送出" class='bg-mainb text-white py-3 px-8 hover:bg-mainb-light cursor-pointer text-lg'>
+  </div>
+  <div class="divide-x divide-mainb text-mainb flex justify-center mt-6">
+    <a href="#" class='px-4 hover:opacity-75'>版權說明</a>
+    <a href="#" class='px-4 hover:opacity-75'>訂購服務</a>
+    <a href="#" class='px-4 hover:opacity-75'>贊助我們</a>
+    <a href="#" class='px-4 hover:opacity-75'>聯絡我們</a>
+    <a href="#" class='px-4 hover:opacity-75'>簡体中文</a>
+
+  </div>
+  <div class="w-full mt-8 bg-m-gold text-white">
+    <div class="container text-center py-6 leading-8 mx-auto">
+      <p>奇蹟課程中文部網站，是《奇蹟課程》出版機構「心靈平安基金會」委託譯者若水女士為華文讀者成立的正式網站。</p>
+      <p>奇蹟資訊中心著作權所有 © 2020 All Rights Reserved. </p>
+    </div>
+  </div>
+</footer>
+  <!-- footer END -->
+
+
+  <div class="topBtn">
+    <img src="./images/topBtn.png" alt="">
+  </div>
+
+  <script>
+    // topBtn
+    $('.topBtn').click(function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // searchBtn
+    $('#searchBtn').click(function () {
+      $('#searchBar').toggleClass('hidden');
+    });
+
+    $('#searchBar .clozBtn').click(function () {
+      $('#searchBar').toggleClass('hidden');
+    });
+
+
+    // moblie menu
+    $('#m_menuBtn').click(function () {
+      $('#mainMenu').toggleClass('show');
+    });
+
+    $('#mainMenu').click(function () {
+      $('#mainMenu').toggleClass('show');
+    });
+
+    $(window).on('scroll', function () {
+      const pos = typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement
+        .scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
+
+      if (pos > 500) {
+        $('#header').addClass('bg-1');
+        $('.topBtn').removeClass('hidden');
+      } else {
+        $('#header').removeClass('bg-1');
+        $('.topBtn').addClass('hidden');
+      }
+
+      console.log(pos);
+    })
+
+
+    // header
+  </script>
+</body>
+
+</html>

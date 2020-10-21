@@ -166,10 +166,20 @@ $compass-imagehelper-imagesmap: (
     height: '629',
     hash: '8c5f4d1332eaa091218fbe2961d42b60'
   ),
+  'bg-6-2.png': (
+    width: '1658',
+    height: '330',
+    hash: 'dd63ad09771e6030f38870bc3be0ff94'
+  ),
   'bg-6.png': (
     width: '1974',
     height: '920',
     hash: 'dd22b488c7c7efd581071f960e963514'
+  ),
+  'bg0.jpg': (
+    width: '1140',
+    height: '582',
+    hash: '3616ac441c76a4d0720c76532fd4c854'
   ),
   'card.png': (
     width: '61',
@@ -186,6 +196,26 @@ $compass-imagehelper-imagesmap: (
     height: '260',
     hash: '2407955c522a41d05240e115af4e31a7'
   ),
+  'demo3.png': (
+    width: '800',
+    height: '270',
+    hash: 'cbf794d8e90946f0949f1f470ea1fa2d'
+  ),
+  'demo4.png': (
+    width: '314',
+    height: '155',
+    hash: 'f56acd8d71bf49c6535e543c0157ba32'
+  ),
+  'demo5.png': (
+    width: '150',
+    height: '211',
+    hash: '49ad0b128fb98cd15a6491f7e17367fd'
+  ),
+  'fb-icon.png': (
+    width: '11',
+    height: '20',
+    hash: 'c6ee27aa8d6f638113cc622961e96a36'
+  ),
   'fbBtn.png': (
     width: '50',
     height: '50',
@@ -200,6 +230,11 @@ $compass-imagehelper-imagesmap: (
     width: '143',
     height: '121',
     hash: 'fc88f2662767991af8b070b5f0cbde88'
+  ),
+  'heart-icon.png': (
+    width: '22',
+    height: '19',
+    hash: '4272fc6dbb9ab7d3b9cdfd0206e12bfb'
   ),
   'index.png': (
     width: '1540',
@@ -391,6 +426,22 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('bg-5.png');
 }
 
+%bg-6-2-png {
+  // Available properties:
+  // prefix: ;
+  // width: 1658;
+  // height: 330;
+  // filename: bg-6-2.png;
+  // basename: bg-6-2;
+  // dirname: images;
+  // ext: .png;
+  // path: bg-6-2.png;
+  // fullname: bg-6-2-png;
+  // mime: image/png;
+  // hash: dd63ad09771e6030f38870bc3be0ff94;
+  background-image: image-url('bg-6-2.png');
+}
+
 %bg-6-png {
   // Available properties:
   // prefix: ;
@@ -405,6 +456,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: dd22b488c7c7efd581071f960e963514;
   background-image: image-url('bg-6.png');
+}
+
+%bg0-jpg {
+  // Available properties:
+  // prefix: ;
+  // width: 1140;
+  // height: 582;
+  // filename: bg0.jpg;
+  // basename: bg0;
+  // dirname: images;
+  // ext: .jpg;
+  // path: bg0.jpg;
+  // fullname: bg0-jpg;
+  // mime: image/jpeg;
+  // hash: 3616ac441c76a4d0720c76532fd4c854;
+  background-image: image-url('bg0.jpg');
 }
 
 %card-png {
@@ -455,6 +522,70 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('demo2.png');
 }
 
+%demo3-png {
+  // Available properties:
+  // prefix: ;
+  // width: 800;
+  // height: 270;
+  // filename: demo3.png;
+  // basename: demo3;
+  // dirname: images;
+  // ext: .png;
+  // path: demo3.png;
+  // fullname: demo3-png;
+  // mime: image/png;
+  // hash: cbf794d8e90946f0949f1f470ea1fa2d;
+  background-image: image-url('demo3.png');
+}
+
+%demo4-png {
+  // Available properties:
+  // prefix: ;
+  // width: 314;
+  // height: 155;
+  // filename: demo4.png;
+  // basename: demo4;
+  // dirname: images;
+  // ext: .png;
+  // path: demo4.png;
+  // fullname: demo4-png;
+  // mime: image/png;
+  // hash: f56acd8d71bf49c6535e543c0157ba32;
+  background-image: image-url('demo4.png');
+}
+
+%demo5-png {
+  // Available properties:
+  // prefix: ;
+  // width: 150;
+  // height: 211;
+  // filename: demo5.png;
+  // basename: demo5;
+  // dirname: images;
+  // ext: .png;
+  // path: demo5.png;
+  // fullname: demo5-png;
+  // mime: image/png;
+  // hash: 49ad0b128fb98cd15a6491f7e17367fd;
+  background-image: image-url('demo5.png');
+}
+
+%fb-icon-png {
+  // Available properties:
+  // prefix: ;
+  // width: 11;
+  // height: 20;
+  // filename: fb-icon.png;
+  // basename: fb-icon;
+  // dirname: images;
+  // ext: .png;
+  // path: fb-icon.png;
+  // fullname: fb-icon-png;
+  // mime: image/png;
+  // hash: c6ee27aa8d6f638113cc622961e96a36;
+  background-image: image-url('fb-icon.png');
+}
+
 %fbBtn-png {
   // Available properties:
   // prefix: ;
@@ -501,6 +632,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: fc88f2662767991af8b070b5f0cbde88;
   background-image: image-url('fbIcon-2.png');
+}
+
+%heart-icon-png {
+  // Available properties:
+  // prefix: ;
+  // width: 22;
+  // height: 19;
+  // filename: heart-icon.png;
+  // basename: heart-icon;
+  // dirname: images;
+  // ext: .png;
+  // path: heart-icon.png;
+  // fullname: heart-icon-png;
+  // mime: image/png;
+  // hash: 4272fc6dbb9ab7d3b9cdfd0206e12bfb;
+  background-image: image-url('heart-icon.png');
 }
 
 %index-png {

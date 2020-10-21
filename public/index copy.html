@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> 奇蹟網 </title>
+  <!-- hiding the Browser’s User Interface -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- iOS 6 -->
+  <meta name="apple-mobile-web-app-title" content="">
+  <!-- meta start -->
+  <meta name="title" content="奇蹟網" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="copyright" content="" />
+  <link rel="image_src" href="" />
+  <link rel="icon" type="image/png" href="./logo.png" />
+
+  <!-- OG -->
+  <meta property="og:title" content="奇蹟網" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <meta property="fb:app_id" content="" />
+  <!-- CSS -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+  <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+  <!-- sider -->
+  <!-- login : remove hidden class to show-->
+<div
+  class="popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 hidden">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+    <!-- clozBtn -->
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-center">會員登入</h2>
+      <hr class="text-gray-400 mt-4">
+      <div class="px-2 pt-4 md:px-48">
+        <a href="#" class='rounded-full  text-center text-white py-2 min-w-40 block my-4 hover:bg-opacity-75'
+          style="background-color: #4469b0;">
+          <i class="fb-icon-btn icon mr-2"></i> 快速註冊 / 登入
+        </a>
+        <div class="sideline text-center text-sm">OR</div>
+        <input type="email" name="emal" id="email" placeholder="Email / 帳號"
+          class='w-full mt-4 py-2 rounded-full px-4 border border-gray-400'>
+        <!-- border-red-600 & border-2 for error input -->
+        <input type="password" name="password" id="password" placeHolder="密碼"
+          class='w-full mt-4 py-2 rounded-full px-4 border-red-600 border-2'>
+        <div class="text-red-600 mt-1">*必填欄位</div>
+        <input type="submit" value="登入"
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
+
+        <div class="flex justify-center mt-4">
+          <a href="#" class='text-m-orange mx-2 hover:underline'>註冊會員</a>
+          <a href="#" class='text-m-orange mx-2 hover:underline'>忘記密碼</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- email sign up : remove hidden class to show-->
+<div
+  class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+    <!-- clozBtn -->
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-center">Email註冊</h2>
+      <hr class="text-gray-400 mt-4">
+      <div class="px-2 pt-4 md:px-48">
+        <input type="email" name="emal" id="email" placeholder="Email / 帳號"
+          class='w-full mt-4 py-2 rounded-full px-4 border border-gray-400'>
+        <input type="password" name="password" id="password" placeHolder="密碼"
+          class='w-full mt-4 py-2 rounded-full px-4 border border-gray-400'>
+        <input type="submit" value="註冊會員"
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
+
+        <div class="flex justify-center mt-4">
+          註冊會員代表您已詳閱並同意<a href="#" target='_blank' class="cursor-pointer text-m-orange hover:underline">隱私權政策</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- forget password : remove hidden class to show-->
+<div
+  class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-center">忘記密碼</h2>
+      <hr class="text-gray-400 mt-4">
+      <div class="px-2 md:px-32 text-center pt-4">請輸入您註冊時所填寫的e-mail，<br>
+        我們會立即發送密碼重新設定信到您的e-mail信箱。</div>
+      <div class="px-2 pt-4 md:px-48">
+        <input type="email" name="emal" id="email" placeholder="請輸入註冊時填寫的Email"
+          class='w-full py-2 rounded-full px-4 border border-gray-400'>
+        <input type="submit" value="確認"
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- password send : remove hidden class to show -->
+<div
+  class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-center">密碼發送</h2>
+      <hr class="text-gray-400 mt-4">
+      <div class="px-2 md:px-32 text-center pt-4">我們已將密碼重設信件寄至您的信箱
+        <span class="text-m-gold">staresky2009@gmail.com</span>，請您前往收取，謝謝。
+        為維護您的隱私及權益，信件連結將於密碼重設或24小時後失效。</div>
+      <div class="px-2 pt-4 md:px-48">
+        <input type="submit" value="確認"
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- lesson : remove hidden class to show -->
+<div
+  class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div>
+      <h2 class="text-2xl text-center">密碼發送</h2>
+      <hr class="text-gray-400 mt-4">
+      <div class="px-2 pt-4 md:px-48">
+        <div class="flex justify-center items-center">
+          <div class='mr-4 text-lg'>課程進度</div>
+          <div class="relative">
+            <select
+              class="rounded-full block appearance-none w-full  border  text-gray-700 py-3 px-6 pr-16 leading-tight focus:outline-none focus:bg-white border-gray-500">
+              <option>第257課</option>
+              <option>第258課</option>
+              <option>第259課</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-2 md:px-32 pt-4">
+        <label class="flex items-start mt-4">
+          <input type="radio" class="mt-1 form-radio text-mainb border-mainb" name="accountType" value="personal">
+          <span class="ml-2">固定 (停留在上方設定的課程進度)</span>
+        </label>
+        <label class="flex items-start mt-4">
+          <input type="radio" class="mt-1 form-radio text-mainb border-mainb " name="accountType" value="personal">
+          <span class="ml-2">每天前進一課 (設定好課程進度，之後每日自動推進一課)</span>
+        </label>
+        <input type="submit" value="確認"
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-6 cursor-pointer hover:bg-opacity-75'>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- sider END-->
+
+  <!-- navbar -->
+  <header id='header' class='fixed w-full z-40 text-2xl lg:text-base'>
+  <div class="bg-white w-full z-50 bg-opacity-50">
+    <div class="container mx-auto py-1 flex text-mainb font-bold relative justify-between px-4">
+      <div class="flex items-center">
+        <a href="#">
+          <img src="./images/logo.png" alt="">
+        </a>
+        <div id='mainMenu'
+          class='text-3xl lg:text-base lg:items-center  w-full h-full fixed top-0 left-0 z-50 overflow-y-scroll bg-black bg-opacity-25 lg:bg-transparent lg:relative lg:overflow-y-visible '>
+          <div class='menuInnerContainer bg-m-gold w-2/3 lg:w-full lg:bg-transparent min-h-full flex lg:items-center pt-6 lg:pt-0'>
+            <!-- <div
+              class="clozBtn text-mainb absolute right-0 top-0 mr-8 mt-8 cursor-pointer hover:text-white duration-300 lg:hidden">
+              <svg class='fill-current w-20 h-20 lg:w-12  lg:h-12' xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div> -->
+            <ul class='flex items-center ml-4 menu  w-full  flex-col lg:flex-row' >
+              <li class='relative'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>關於奇蹟課程</a></li>
+              <li class='relative'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>最新消息</a></li>
+              <li class='relative'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>奇蹟專欄</a>
+                <div
+                  class='w-full  lg:w-auto lg:absolute text-gray-700 lg:border-t-8 whitespace-no-wrap lg:border-m-gold  lg:bg-white top-full left-0 z-50  subMenu px-3'>
+                  <div class="lg:inline-flex flex-col  p-4 flex-shrink-0">
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>若水</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>肯恩</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                  </div>
+                  <div class="lg:inline-flex flex-col  p-4 flex-shrink-0">
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>若水</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>肯恩</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                  </div>
+                  <div class="lg:inline-flex flex-col  p-4 flex-shrink-0">
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>若水若水若水若水</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>肯恩</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                    <div><a href="#" class='py-1 px-4 block hover:text-mainb'>Judy</a></div>
+                  </div>
+                </div>
+              </li>
+              <li class='relative'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>出版品</a></li>
+              <li class='relative'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>奇蹟卡</a></li>
+              <li class='relative'>
+                <a href="#" class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>贊助我們</a>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+      <ul class='flex items-center menu '>
+        <li class='relative mr-1'>
+          <a href="#" class='  hover:text-m-gold p-2 flex items-center ' id='searchBtn'>
+            <svg class='fill-current w-8 h-8 lg:w-6 lg:h-6' viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+        <li class='relative mr-1'>
+          <a href="#" class='  hover:text-m-gold p-2 flex items-center'>
+            <svg class='fill-current w-8 h-8 lg:w-6 lg:h-6' viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <div
+            class='absolute text-gray-500 border-t-8 whitespace-no-wrap border-m-gold bg-white top-full right-0 z-50  subMenu px-3'>
+            <div class="inline-flex flex-col  p-4 flex-shrink-0">
+              <div><a href="#" class='py-1 px-4 block hover:text-mainb'>文章收藏</a></div>
+              <div><a href="#" class='py-1 px-4 block hover:text-mainb'>奇蹟卡收藏</a></div>
+              <div><a href="#" class='py-1 px-4 block hover:text-mainb'>每日一課設定</a></div>
+            </div>
+          </div>
+        </li>
+        <li class='relative mr-1'>
+          <a href="#" class='p-2 hover:text-m-gold flex items-center'>簡體</a>
+        </li>
+        <li class="relative lg:hidden" id='m_menuBtn'>
+          <a href="#" class=' mr-1 hover:text-m-gold p-2 flex items-center'>
+            <svg class='fill-current w-12 h-12' fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div id="searchBar" class='bg-m-gold w-full text-white hidden'>
+      <div class="container mx-auto py-2 px-4 flex items-center justify-center relative flex-col lg:flex-row ">
+        <div class="mr-4 py-5 lg:py-0">全站搜尋</div>
+        <div class="flex rounded-full max-w-xl w-full border overflow-hidden mr-4 ">
+          <input type="search" placeholder="輸入搜尋內容" class='w-full pl-6 text-black rounded-none'>
+          <input type="submit" value="搜尋"
+            class='bg-mainb text-white py-2 px-8 hover:bg-mainb-light cursor-pointer text-lg'>
+        </div>
+        <div class="my-5 lg:my-0">熱門：肯恩 正文 真寬恕 讀書會</div>
+        <div
+          class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 lg:top-auto lg:mt-0 lg:mr-0  cursor-pointer hover:text-white duration-300 ">
+          <svg class='fill-current w-12 h-12' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+      </div>
+    </div>
+</header>
+  <!-- navbar END -->
+
+  
+<!-- content -->
+<section id='index'>
+  <div class="container mx-auto">
+    <div class="txtBox">
+      <h2 class='text-xl'>
+        不要企圖評估聖子的價值，他是上主的神聖造化，否則你就等於是在評論他的天父而跟祂作對了。
+      </h2>
+      <h2 class='text-xl mt-2'>T-14.III.15:1</h2>
+      <a href="#"
+        class='btn bg-mainb rounded-full text-white h-12 px-8 text-xl inline-flex items-center mt-5 hover:bg-mainb-light'>抽一張屬於我的奇蹟卡<span
+          class='card'></span></a>
+    </div>
+  </div>
+</section>
+
+
+<section id='news' class='my-32 md:mt-0 add-bg bg-1 bg-2'>
+  <div class="container mx-auto">
+    <h1 class="text-4xl text-center">最新消息</h1>
+
+    <div class='newsBoard mx-auto px-4 mt-4'>
+      <div class='divide-y'>
+        <a href="#" class='item flex  py-3 text-lg'>
+          <span class='date  italic font-bold inline-block text-m-gold font-arial text-center'>2020.07.15</span>
+          <span class='type  inline-block text-mainb text-center font-bold'>出版訊息</span>
+          <span class='content text-xl inline-block pl-2 truncate'><span
+              class="news-tag bg-tag-red text-xs text-white">NEW</span>《學員練習手冊行旅》第四冊，正式上市！</span>
+          <svg class='arr align-center fill-current text-m-gold w-8 h-8' xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#" class='item flex  py-3 text-lg'>
+          <span class='date  italic font-bold inline-block text-m-gold font-arial text-center'>2020.07.15</span>
+          <span class='type  inline-block text-mainb text-center font-bold'>出版訊息</span>
+          <span class='content text-xl inline-block pl-2 truncate'>《學員練習手冊行旅》第四冊，正式上市！</span>
+          <svg class='arr align-center fill-current text-m-gold w-8 h-8' xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#" class='item flex  py-3 text-lg'>
+          <span class='date  italic font-bold inline-block text-m-gold font-arial text-center'>2020.07.15</span>
+          <span class='type  inline-block text-mainb text-center font-bold'>出版訊息</span>
+          <span class='content text-xl inline-block pl-2 truncate'>《學員練習手冊行旅》第四冊，正式上市！</span>
+          <svg class='arr align-center fill-current text-m-gold w-8 h-8' xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#" class='item flex  py-3 text-lg'>
+          <span class='date  italic font-bold inline-block text-m-gold font-arial text-center'>2020.07.15</span>
+          <span class='type  inline-block text-mainb text-center font-bold'>出版訊息</span>
+          <span class='content text-xl inline-block pl-2 truncate'>《學員練習手冊行旅》第四冊，正式上市！</span>
+          <svg class='arr align-center fill-current text-m-gold w-8 h-8' xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#" class='item flex  py-3 text-lg'>
+          <span class='date  italic font-bold inline-block text-m-gold font-arial text-center'>2020.07.15</span>
+          <span class='type  inline-block text-mainb text-center font-bold'>出版訊息</span>
+          <span class='content text-xl inline-block pl-2 truncate'>《學員練習手冊行旅》第四冊，正式上市！</span>
+          <svg class='arr align-center fill-current text-m-gold w-8 h-8' xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="#"
+        class='btn bg-mainb rounded-full text-white h-12 px-10 text-xl inline-flex items-center mt-5 hover:bg-mainb-light'>看更多消息</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class='my-32 add-bg bg-3' id='column'>
+  <div class="container mx-auto ">
+    <h1 class="text-4xl text-center">主題專欄</h1>
+
+    <div class="slider slider-3">
+      <div class="slide-item hoverUp px-2">
+        <a href="#" class='p-3 block rounded-md shadow bg-white'>
+          <div class="pic bg-cover bg-center rounded-md ratio-300-230"
+            style='background-image: url(./images/demo1.png);'></div>
+          <div class="text-center z-10 relative" style="margin-top:-15px;">
+            <div class="tag px-8 py-1 bg-m-gold rounded-full inline-block text-white">肯恩談</div>
+          </div>
+          <div class="flex items-center h-24 overflow-hidden my-1 lg:h-12  " style="min-height: 5rem;">
+            <h2 class="text-2xl  text-mainb lg:text-xl">在每日生活中為真理作證</h2>
+          </div>
+          <div class="date text-m-gold">2020-06-28</div>
+          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
+            我一直在兩者之間來回擺盪。
+            可以請你談談如何在此刻接受耶？</p>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-2">
+        <a href="#" class='p-3 block rounded-md shadow bg-white'>
+          <div class="pic bg-cover bg-center rounded-md ratio-300-230"
+            style='background-image: url(./images/demo1.png);'></div>
+          <div class="text-center z-10 relative" style="margin-top:-15px;">
+            <div class="tag px-8 py-1 bg-m-gold rounded-full inline-block text-white">肯恩談</div>
+          </div>
+          <div class="flex items-center h-24 overflow-hidden my-1 lg:h-12" style="min-height: 5rem;">
+            <h2 class="text-2xl text-mainb lg:text-xl">不帶評判地看著自己的評判不帶評判地看著自己的評判</h2>
+          </div>
+          <div class="date text-m-gold">2020-06-28</div>
+          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
+            我一直在兩者之間來回擺盪。
+            可以請你談談如何在此刻接受耶穌的幫助嗎？</p>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-2">
+        <a href="#" class='p-3 block rounded-md shadow bg-white'>
+          <div class="pic bg-cover bg-center rounded-md ratio-300-230"
+            style='background-image: url(./images/demo1.png);'></div>
+          <div class="text-center z-10 relative" style="margin-top:-15px;">
+            <div class="tag px-8 py-1 bg-m-gold rounded-full inline-block text-white">肯恩談</div>
+          </div>
+          <div class="flex items-center h-24 overflow-hidden my-1 lg:h-12" style="min-height: 5rem;">
+            <h2 class="text-2xl text-mainb lg:text-xl">不帶評判地看著自己的評判不帶評判地看著自己的評判</h2>
+          </div>
+          <div class="date text-m-gold">2020-06-28</div>
+          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
+            我一直在兩者之間來回擺盪。
+            可以請你談談如何在此刻接受耶穌的幫助嗎？</p>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-2">
+        <a href="#" class='p-3 block rounded-md shadow bg-white'>
+          <div class="pic bg-cover bg-center rounded-md ratio-300-230"
+            style='background-image: url(./images/demo1.png);'></div>
+          <div class="text-center z-10 relative" style="margin-top:-15px;">
+            <div class="tag px-8 py-1 bg-m-gold rounded-full inline-block text-white">肯恩談</div>
+          </div>
+          <div class="flex items-center h-24 overflow-hidden my-1 lg:h-12" style="min-height: 5rem;">
+            <h2 class="text-2xl text-mainb lg:text-xl">不帶評判地看著自己的評判不帶評判地看著自己的評判</h2>
+          </div>
+          <div class="date text-m-gold">2020-06-28</div>
+          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
+            我一直在兩者之間來回擺盪。</p>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class='my-32'>
+  <div class="container mx-auto">
+    <h1 class="text-4xl text-center">第二百九十五課</h1>
+    <h2 class="mt-2 text-2xl text-center text-mainb">今天，聖靈會透過我去看一切</h2>
+    <div class='flex justify-center'>
+      <audio id="audio1" preload controls class='bg-transparent'>Your browser does not support HTML5 Audio! 😢</audio>
+    </div>
+
+    <div class="text-center">
+      <a href="#"
+        class='btn bg-mainb rounded-full text-white h-12 px-10 text-xl inline-flex items-center mt-5 hover:bg-mainb-light'>閱讀全文</a>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="my-32 add-bg bg-4 bg-5">
+  <div class="container mx-auto">
+    <h1 class="text-4xl text-center">出版品</h1>
+    <div class="slider slider-5 mt-3">
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <a href="#"
+        class='btn bg-mainb rounded-full text-white h-12 px-10 text-xl inline-flex items-center mt-5 hover:bg-mainb-light'>更多出版品</a>
+    </div>
+  </div>
+</section>
+
+<section class="my-32" id='socails-section'>
+  <div class="container mx-auto max-w-screen-lg">
+    <div class="flex justify-around">
+      <a href="#" class='item block'>
+        <div class="pic-wrap relative">
+          <img src="./images/fbIcon-1.png" alt="">
+          <img class='absolute top-0 left-0 pic2' src="./images/fbIcon-2.png" alt="">
+        </div>
+        <div class="mt-3 text-lg text-mainb text-center">FB官方粉絲團</div>
+      </a>
+      <a href="#" class='item block'>
+        <div class="pic-wrap relative">
+          <img src="./images/lineIcon-1.png" alt="">
+          <img class='absolute top-0 left-0 pic2' src="./images/lineIcon-2.png" alt="">
+        </div>
+        <div class="mt-3 text-lg text-mainb text-center">LINE官方帳號</div>
+      </a>
+      <a href="#" class='item block'>
+        <div class="pic-wrap relative">
+          <img src="./images/ytIcon-1.png" alt="">
+          <img class='absolute top-0 left-0 pic2' src="./images/ytIcon-2.png" alt="">
+        </div>
+        <div class="mt-3 text-lg text-mainb text-center">影音頻道</div>
+      </a>
+      <a href="#" class='item block'>
+        <div class="pic-wrap relative">
+          <img src="./images/webIcon-1.png" alt="">
+          <img class='absolute top-0 left-0 pic2' src="./images/webIcon-2.png" alt="">
+        </div>
+        <div class="mt-3 text-lg text-mainb text-center">贊助奇蹟網站</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="my-32" id='calendar-section'>
+  <div class="container mx-auto  max-w-screen-lg  ">
+    <h1 class="text-4xl text-center">奇蹟日曆</h1>
+    <div class="flex flex-col lg:flex-row px-4 mt-5">
+      <div id="calendar" class='mr-8'></div>
+      <div class="divide-y lg:w-1/2 mt-5 lg:mt-0 txtBox divide-white">
+        <div class='flex items-center px-10 lg:px-0'>
+          <svg class='text-m-orange  w-8 y-8 mr-2' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div class="text-m-orange  text-xl leading-8">時間表 2020.09.02</div>
+        </div>
+        <div class='flex px-10 lg:px-0'>
+          <span
+            class='italic font-bold inline-block text-mainb font-arial tracking-wider mr-3 flex-shrink-0 leading-8'>09:00</span>
+          <span class='inline-block text-mainb rounded-full px-3 bg-m-yellow-light flex-shrink-0 leading-8'>台北三峽</span>
+          <span class='content text-xl inline-block pl-2 truncate'>自在居正文讀書會</span>
+        </div>
+        <div class='flex px-10 lg:px-0'>
+          <span
+            class='italic font-bold inline-block text-mainb font-arial tracking-wider mr-3 flex-shrink-0 leading-8'>09:00</span>
+          <span class='inline-block text-mainb rounded-full px-3 bg-m-yellow-light flex-shrink-0 leading-8'>台北三峽</span>
+          <span class='content text-xl inline-block pl-2 truncate'>自在居正文讀書會</span>
+        </div>
+        <div class='flex px-10 lg:px-0'>
+          <span
+            class='italic font-bold inline-block text-mainb font-arial tracking-wider mr-3 flex-shrink-0 leading-8'>09:00</span>
+          <span class='inline-block text-mainb rounded-full px-3 bg-m-yellow-light flex-shrink-0 leading-8'>台北三峽</span>
+          <span class='content text-xl inline-block pl-2 truncate'>自在居正文讀書會</span>
+        </div>
+        <div class='flex px-10 lg:px-0'>
+          <span
+            class='italic font-bold inline-block text-mainb font-arial tracking-wider mr-3 flex-shrink-0 leading-8'>09:00</span>
+          <span class='inline-block text-mainb rounded-full px-3 bg-m-yellow-light flex-shrink-0 leading-8'>台北三峽</span>
+          <span class='content text-xl inline-block pl-2 truncate'>自在居正文讀書會</span>
+        </div>
+        <div class='flex px-10 lg:px-0'>
+          <span
+            class='italic font-bold inline-block text-mainb font-arial tracking-wider mr-3 flex-shrink-0 leading-8'>09:00</span>
+          <span class='inline-block text-mainb rounded-full px-3 bg-m-yellow-light flex-shrink-0 leading-8'>台北三峽</span>
+          <span class='content text-xl inline-block pl-2 truncate'>自在居正文讀書會</span>
+        </div>
+        <div class='flex px-10 lg:px-0'>
+          <span
+            class='italic font-bold inline-block text-mainb font-arial tracking-wider mr-3 flex-shrink-0 leading-8'>09:00</span>
+          <span class='inline-block text-mainb rounded-full px-3 bg-m-yellow-light flex-shrink-0 leading-8'>台北三峽</span>
+          <span class='content text-xl inline-block pl-2 truncate'>自在居正文讀書會</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js"></script>
+<script src="./js/lib/caleandar.min.js"></script>
+
+<script>
+  // slider
+  $('.slider-3').each(function () {
+    var t = $(this);
+    t.slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+
+          }
+        },
+      ]
+    });
+  })
+
+
+  $('.slider-5').each(function () {
+    var t = $(this);
+    t.slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 5,
+      responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+      ]
+    });
+  })
+
+
+
+
+  // audio
+  const player = new Plyr('#audio1', {
+    controls: [
+      'play',
+      'current-time',
+      'progress',
+      'duration',
+      'mute',
+      'volume',
+    ]
+  });
+
+
+
+
+  // calendar
+  var events = [{
+    'Date': new Date(2020, 9, 14),
+    'Link': function () {
+      alert('2020/10/14');
+    },
+  }, {
+    'Date': new Date(2020, 10, 15),
+    'Link': function () {
+      alert('2020/11/15');
+    },
+  }];
+
+
+  var settings = {
+    EventTargetWholeDay: true,
+  };
+
+  var element = document.getElementById('calendar');
+  caleandar(element, events, settings);
+</script>
+
+  <!-- footer -->
+  <footer class="footer mt-32 add-bg bg-6">
+  <div class="flex justify-center">
+    <a href="#" class='block mx-3 hover:opacity-75'>
+      <img src="./images/fbBtn.png" alt="fbBtn">
+    </a>
+    <a href="#" class='block mx-3 hover:opacity-75'>
+      <img src="./images/youtubeBtn.png" alt="youtubeBtn">
+    </a>
+    <a href="#" class='block mx-3 hover:opacity-75'>
+      <img src="./images/lineBtn.png" alt="lineBtn">
+    </a>
+  </div>
+  <div class="mt-8 flex justify-center rounded-full max-w-xl  mx-auto border overflow-hidden">
+    <input type="email" placeholder="輸入Email 訂閱電子報" class='w-full pl-6'>
+    <input type="submit" value="送出" class='bg-mainb text-white py-3 px-8 hover:bg-mainb-light cursor-pointer text-lg'>
+  </div>
+  <div class="divide-x divide-mainb text-mainb flex justify-center mt-6">
+    <a href="#" class='px-4 hover:opacity-75'>版權說明</a>
+    <a href="#" class='px-4 hover:opacity-75'>訂購服務</a>
+    <a href="#" class='px-4 hover:opacity-75'>贊助我們</a>
+    <a href="#" class='px-4 hover:opacity-75'>聯絡我們</a>
+    <a href="#" class='px-4 hover:opacity-75'>簡体中文</a>
+
+  </div>
+  <div class="w-full mt-8 bg-m-gold text-white">
+    <div class="container text-center py-6 leading-8 mx-auto">
+      <p>奇蹟課程中文部網站，是《奇蹟課程》出版機構「心靈平安基金會」委託譯者若水女士為華文讀者成立的正式網站。</p>
+      <p>奇蹟資訊中心著作權所有 © 2020 All Rights Reserved. </p>
+    </div>
+  </div>
+</footer>
+  <!-- footer END -->
+
+
+  <div class="topBtn">
+    <img src="./images/topBtn.png" alt="">
+  </div>
+
+  <script>
+    // topBtn
+    $('.topBtn').click(function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // searchBtn
+    $('#searchBtn').click(function () {
+      $('#searchBar').toggleClass('hidden');
+    });
+
+    $('#searchBar .clozBtn').click(function () {
+      $('#searchBar').toggleClass('hidden');
+    });
+
+
+    // moblie menu
+    $('#m_menuBtn').click(function () {
+      $('#mainMenu').toggleClass('show');
+    });
+
+    $('#mainMenu').click(function () {
+      $('#mainMenu').toggleClass('show');
+    });
+
+    $(window).on('scroll', function () {
+      const pos = typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement
+        .scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
+
+      if (pos > 500) {
+        $('#header').addClass('bg-1');
+        $('.topBtn').removeClass('hidden');
+      } else {
+        $('#header').removeClass('bg-1');
+        $('.topBtn').addClass('hidden');
+      }
+
+      console.log(pos);
+    })
+
+
+    // header
+  </script>
+</body>
+
+</html>

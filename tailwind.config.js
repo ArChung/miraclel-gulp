@@ -1,9 +1,14 @@
+const { colors } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: [
+    './src/**/*.html',
+    './src/**/*.ejs',
+  ],
   theme: {
     // colors: {
     //   blue: '#2f4c6a',
@@ -21,12 +26,20 @@ module.exports = {
         'tag-red': '#cc5e47',
         'm-orange': '#ec6941',
         'm-yellow-light': '#f4f0e0',
-
+        gray: {
+          ...colors.gray,
+          '100': '#f9f9f9',
+          '300': '#e0e0e0',
+          '500': '#b5b5b5',
+          '900': '#3a3a3a',
+        }
       }
     }
 
 
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/custom-forms'),
+  ]
 }
