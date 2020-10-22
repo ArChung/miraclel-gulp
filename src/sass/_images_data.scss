@@ -231,11 +231,6 @@ $compass-imagehelper-imagesmap: (
     height: '155',
     hash: 'f56acd8d71bf49c6535e543c0157ba32'
   ),
-  'demo5.png': (
-    width: '150',
-    height: '211',
-    hash: '49ad0b128fb98cd15a6491f7e17367fd'
-  ),
   'demo6.png': (
     width: '520',
     height: '360',
@@ -672,22 +667,6 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: f56acd8d71bf49c6535e543c0157ba32;
   background-image: image-url('demo4.png');
-}
-
-%demo5-png {
-  // Available properties:
-  // prefix: ;
-  // width: 150;
-  // height: 211;
-  // filename: demo5.png;
-  // basename: demo5;
-  // dirname: images;
-  // ext: .png;
-  // path: demo5.png;
-  // fullname: demo5-png;
-  // mime: image/png;
-  // hash: 49ad0b128fb98cd15a6491f7e17367fd;
-  background-image: image-url('demo5.png');
 }
 
 %demo6-png {
