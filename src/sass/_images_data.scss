@@ -176,10 +176,25 @@ $compass-imagehelper-imagesmap: (
     height: '920',
     hash: 'dd22b488c7c7efd581071f960e963514'
   ),
+  'bg-card.jpg': (
+    width: '735',
+    height: '905',
+    hash: '118f2526e6547351cbea75dab16ec0b1'
+  ),
   'bg0.jpg': (
     width: '1140',
     height: '582',
     hash: '3616ac441c76a4d0720c76532fd4c854'
+  ),
+  'card-back.jpg': (
+    width: '400',
+    height: '240',
+    hash: 'ac2500f71ca7b139027a33996ff94d74'
+  ),
+  'card-front.jpg': (
+    width: '400',
+    height: '240',
+    hash: '0c6f7c744cc2069e41d639ba6cb71d46'
   ),
   'card.png': (
     width: '61',
@@ -210,6 +225,21 @@ $compass-imagehelper-imagesmap: (
     width: '150',
     height: '211',
     hash: '49ad0b128fb98cd15a6491f7e17367fd'
+  ),
+  'demo6.png': (
+    width: '520',
+    height: '360',
+    hash: '33ff29059a5ef00d9c9773447227184b'
+  ),
+  'demo7.png': (
+    width: '300',
+    height: '230',
+    hash: 'c1708f59e86b8b4d6f90096586edb799'
+  ),
+  'demo8.png': (
+    width: '520',
+    height: '280',
+    hash: '8a738c25043ec82371340b755ecee1ee'
   ),
   'fb-icon.png': (
     width: '11',
@@ -458,6 +488,22 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('bg-6.png');
 }
 
+%bg-card-jpg {
+  // Available properties:
+  // prefix: ;
+  // width: 735;
+  // height: 905;
+  // filename: bg-card.jpg;
+  // basename: bg-card;
+  // dirname: images;
+  // ext: .jpg;
+  // path: bg-card.jpg;
+  // fullname: bg-card-jpg;
+  // mime: image/jpeg;
+  // hash: 118f2526e6547351cbea75dab16ec0b1;
+  background-image: image-url('bg-card.jpg');
+}
+
 %bg0-jpg {
   // Available properties:
   // prefix: ;
@@ -472,6 +518,38 @@ $compass-imagehelper-imagesmap: (
   // mime: image/jpeg;
   // hash: 3616ac441c76a4d0720c76532fd4c854;
   background-image: image-url('bg0.jpg');
+}
+
+%card-back-jpg {
+  // Available properties:
+  // prefix: ;
+  // width: 400;
+  // height: 240;
+  // filename: card-back.jpg;
+  // basename: card-back;
+  // dirname: images;
+  // ext: .jpg;
+  // path: card-back.jpg;
+  // fullname: card-back-jpg;
+  // mime: image/jpeg;
+  // hash: ac2500f71ca7b139027a33996ff94d74;
+  background-image: image-url('card-back.jpg');
+}
+
+%card-front-jpg {
+  // Available properties:
+  // prefix: ;
+  // width: 400;
+  // height: 240;
+  // filename: card-front.jpg;
+  // basename: card-front;
+  // dirname: images;
+  // ext: .jpg;
+  // path: card-front.jpg;
+  // fullname: card-front-jpg;
+  // mime: image/jpeg;
+  // hash: 0c6f7c744cc2069e41d639ba6cb71d46;
+  background-image: image-url('card-front.jpg');
 }
 
 %card-png {
@@ -568,6 +646,54 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: 49ad0b128fb98cd15a6491f7e17367fd;
   background-image: image-url('demo5.png');
+}
+
+%demo6-png {
+  // Available properties:
+  // prefix: ;
+  // width: 520;
+  // height: 360;
+  // filename: demo6.png;
+  // basename: demo6;
+  // dirname: images;
+  // ext: .png;
+  // path: demo6.png;
+  // fullname: demo6-png;
+  // mime: image/png;
+  // hash: 33ff29059a5ef00d9c9773447227184b;
+  background-image: image-url('demo6.png');
+}
+
+%demo7-png {
+  // Available properties:
+  // prefix: ;
+  // width: 300;
+  // height: 230;
+  // filename: demo7.png;
+  // basename: demo7;
+  // dirname: images;
+  // ext: .png;
+  // path: demo7.png;
+  // fullname: demo7-png;
+  // mime: image/png;
+  // hash: c1708f59e86b8b4d6f90096586edb799;
+  background-image: image-url('demo7.png');
+}
+
+%demo8-png {
+  // Available properties:
+  // prefix: ;
+  // width: 520;
+  // height: 280;
+  // filename: demo8.png;
+  // basename: demo8;
+  // dirname: images;
+  // ext: .png;
+  // path: demo8.png;
+  // fullname: demo8-png;
+  // mime: image/png;
+  // hash: 8a738c25043ec82371340b755ecee1ee;
+  background-image: image-url('demo8.png');
 }
 
 %fb-icon-png {

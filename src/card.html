@@ -1,0 +1,112 @@
+---
+title: 奇蹟網 | 奇蹟抽卡
+layout: ./src/layout.ejs
+engine: ejs
+current: index
+footer_style: 2
+---
+
+<!-- content -->
+<div class="w-full add-bg bg-0 pt-32 text-gray-900">
+  <div class="container mx-auto px-4">
+    <div class='flex'>
+      <a href="#" class="px-1">首頁</a>
+      <span>></span>
+      <a href="#" class="px-1">奇蹟抽卡</a>
+    </div>
+    <h1 class="text-4xl text-center tracking-wide py-10">奇蹟抽卡</h1>
+
+
+    <hr class="text-gray-400 border-t-2">
+
+    <div class="mt-6 py-10 text-center mx-auto max-w-800 px-8 rounded-md bg-cover leading-8 bg-center"
+      style="background-image: url(./images/bg-card.jpg);">
+      <div class="text-mainb">抽卡說明</div>
+      <div class="font-bold mt-4">奇蹟卡是你內在本有的答覆。<br>
+        此刻，請你放下判斷，安靜下來。<br>
+        誠實的面對問題，提出問題，對所見負責。<br>
+        不拘泥於形式，以你熟悉的方式對祂祈禱。<br>
+        抽卡後感受一下聖靈給你的答覆，讓答覆在心中醞釀。
+      </div>
+      <div class="text-left mt-8 mx-auto lg:max-w-xl addDot-front"> 範例1：</div>
+      <div class="mt-1 mx-auto lg:max-w-xl pl-10 text-left">親愛的聖靈，今天發生了( )， 我真的很( )，我不知道該怎麼辦，也不知道怎麼看，我相信總有另一條更好的路，請祢指引我。
+      </div>
+      <div class="text-left mt-8 mx-auto lg:max-w-xl addDot-front"> 範例2:</div>
+      <div class="mt-1 mx-auto lg:max-w-xl pl-10 text-left">親愛的聖靈，我真誠地邀請祢與我同在，我願一心不二以學習寬恕為目的，向內尋求指引，請祢教我，轉換祢的慧眼看這世界。
+        阿們</div>
+      <div class="mt-10 text-xl tracking-wider text-mainb">點擊抽卡</div>
+      <div class="animate-bounce flex justify-center mt-2">
+        <svg class='text-mainb w-8 h-8' fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <div class="miracle-card card-scale mx-auto mt-2 rounded-md"></div>
+    </div>
+    <div class="mt-12 flex justify-center">
+      <a href="#" class="px-6 btn-up rounded-full mx-2 inline-flex justify-center text-white py-2 text-xl"
+        style="background-color: #2d67be;">分享至FB</a>
+      <a href="#" class="px-6 btn-up rounded-full mx-2 inline-flex justify-center text-white py-2 text-xl"
+        style="background-color: #af2f23;">
+        <span class='mr-1 inline-flex items-center'>
+          <svg class='fill-current text-white w-6 h-6 ' viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+              clip-rule="evenodd" />
+          </svg>
+        </span>收藏卡片</a>
+    </div>
+    <hr class="text-gray-400 border-t-2 my-10">
+  </div>
+</div>
+
+<!-- card popup : remove hidden class to show -->
+<div
+  class="hidden cardPop popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
+  <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
+
+    <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
+      <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+
+    <div class="miracle-card-filp mx-auto rounded-md">
+      <div class="card-container">
+        <div class="card-face card-front" style="background-image: url(./images/card-front.jpg);"></div>
+        <div class="card-face card-back" style="background-image: url(./images/card-back.jpg);"></div>
+      </div>
+    </div>
+
+    <textarea class="form-textarea mt-8 block w-full" rows="4" placeholder="寫下給自己的話..."></textarea>
+
+    <div class="mt-8 flex justify-center">
+      
+      <a href="#" class="px-6 btn-up rounded-full mx-2 inline-flex justify-center text-white py-2 text-xl"
+        style="background-color: #af2f23;">
+        <span class='mr-1 inline-flex items-center'>
+          <svg class='fill-current text-white w-6 h-6 ' viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+              clip-rule="evenodd" />
+          </svg>
+        </span>收藏卡片</a>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script>
+  // click card
+  $('.miracle-card').click(function () {
+    $('.cardPop').removeClass('hidden');
+    $('.miracle-card-filp .card-container').removeClass('flip');
+    setTimeout(() => {
+      $('.miracle-card-filp .card-container').addClass('flip');
+    }, 300);
+  });
+</script>

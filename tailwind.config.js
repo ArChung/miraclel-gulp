@@ -26,6 +26,7 @@ module.exports = {
         'tag-red': '#cc5e47',
         'm-orange': '#ec6941',
         'm-yellow-light': '#f4f0e0',
+        'hash-pink': '#edcdc3',
         gray: {
           ...colors.gray,
           '100': '#f9f9f9',

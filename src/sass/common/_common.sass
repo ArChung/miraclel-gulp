@@ -10,12 +10,23 @@ html
   --plyr-range-thumb-background: #2f4c6a
   --plyr-audio-range-track-background: #c9b262
   --plyr-audio-controls-background: transparent
-  
+  +phone
+    font-size: 120%
 
 
-p
-  margin-top: 1rem
-  margin-bottom: 1rem
+.aritlcle-content
+  .leading-8
+    line-height: 2em
+  .text-lg
+    font-size: 1.125em
+  // &.text-base
+  // &.text-xl
+  //   .text-lg
+  //     font-size: 1.125em
+  // &.text-3xl
+  //   .text-lg
+  //     font-size: 1.125em
+
 
 // a:hover
 //   text-decoration: underline
@@ -31,6 +42,9 @@ input[type=range]::-webkit-slider-thumb:after
 
 .max-w-800
   max-width: 800px
+
+.max-w-830
+  max-width: 830px
 
 .btn-up
   position: relative
@@ -203,21 +217,78 @@ input[type=range]::-webkit-slider-thumb:after
       border-bottom: 1px solid #dcdcdc
       box-sizing: border-box
 
+.aritcle-container
+  p 
+    @apply my-4
+
+.addDot-front
+  position: relative
+  padding-left: 1.5em
+  &:before
+    content: ''
+    height: 5px
+    width: 5px
+    border-radius: 5px
+    position: absolute
+    background-color: #c9b262
+    top: 50%
+    left: .5em
+    transform: translate(0, -50%)
 
 .list-disc1
   li
-    padding-left: 1.5em
-    position: relative
-    &:before
-      content: ''
-      height: 5px
-      width: 5px
-      border-radius: 5px
-      position: absolute
-      background-color: #c9b262
-      top: 50%
-      left: .5em
-      transform: translate(0, -50%)
+    @extend .addDot-front
+
+
+.miracle-card
+  +bg('card-back.jpg')
+  position: relative
+  overflow: hidden
+  cursor: pointer
+  +dTime
+  &:hover
+    transform: scale(1.05)
+    @apply shadow-xl
+    &::before
+      +dTime(1s)
+      left: 110%
+  &::before
+    content: ''
+    position: absolute
+    height: 100%
+    width: 30%
+    background: linear-gradient(to left,rgba(white,0),rgba(white,.8),rgba(white,0))
+    transform: skew(20deg)
+    top: 0
+    left: -50%
+
+
+.miracle-card-filp
+  width: 100%
+  max-width: 400px
+  perspective: 800px
+  +ratio(400,240)
+
+  
+  .card-container
+    +full
+    transform-style: preserve-3d
+    +dTime(1s)
+   
+    .card-face
+      +full 
+      +coverBg
+      backface-visibility: hidden
+
+    .card-front
+      transform: rotateY(180deg)
+
+    .card-back
+
+    &.flip
+      transform: rotateY(180deg)
+  
+
 
 .add-bg
   position: relative
