@@ -25079,6 +25079,10 @@ html {
   font-size: 1.125em;
 }
 
+.aritlcle-content .text-xl {
+  font-size: 1.25em;
+}
+
 .plyr__volume {
   width: 30%;
   max-width: 200px;

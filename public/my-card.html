@@ -571,8 +571,22 @@
       $(this).closest('.popPage').addClass('hidden');
     });
 
+    // fontsize switch
+    $('.fontsize-swicth a').click(function (e) {
+      e.preventDefault();
+      const size = $(this).attr('data-size');
+      const article = $('.aritlcle-content')[0];
+      const prefix = 'text-';
 
-    
+      var classes = article.className.split(" ").filter(function (c) {
+        return c.lastIndexOf(prefix, 0) !== 0;
+      });
+      classes.push('text-' + size);
+
+      article.className = $.trim(classes.join(" "));
+
+      $(this).addClass('active').siblings('a').removeClass('active');
+    });
   </script>
 </body>
 

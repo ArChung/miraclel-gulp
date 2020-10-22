@@ -386,12 +386,10 @@
     <div class="py-4 mx-auto max-w-800 px-2">
       <a herf='#'
         class="bg-white rounded-md border-gray-300 border relative mt-4 block cursor-pointer hover:shadow-md duration-200">
-        <div class="absolute top-0 right-0 mr-2 text-white px-2 py-1 rounded-b-md bg-tag-red">NEW</div>
-        <div class="p-2 flex">
-          <div class="rounded-md bg-gray-100 ratio-300-230 flex-shrink-0" style="width: 300px;">
-            <div class="flex items-center justify-center">
-              <img src="./images/demo5.png" alt="" class="block">
-            </div>
+        <div class="absolute top-0 right-0 mr-2 text-white px-2 py-1 rounded-b-md bg-tag-red z-10">NEW</div>
+        <div class="p-2 flex flex-col md:flex-row">
+          <div class="rounded-md bg-gray-100 ratio-300-230 flex-shrink-0 bg-cover bg-center w-full md:w-2/5" style="background-image: url(./images/demo-300x230.jpg);">
+            
           </div>
           <div class="p-4">
             <div class="px-8 py-1 bg-m-gold rounded-full inline-block text-white">紙本書</div>
@@ -404,12 +402,10 @@
       </a>
       <a herf='#'
         class="bg-white rounded-md border-gray-300 border relative mt-4 block cursor-pointer hover:shadow-md duration-200">
-        <div class="absolute top-0 right-0 mr-2 text-white px-2 py-1 rounded-b-md bg-tag-red">NEW</div>
-        <div class="p-2 flex">
-          <div class="rounded-md bg-gray-100 ratio-300-230 flex-shrink-0" style="width: 300px;">
-            <div class="flex items-center justify-center">
-              <img src="./images/demo5.png" alt="" class="block">
-            </div>
+        <div class="absolute top-0 right-0 mr-2 text-white px-2 py-1 rounded-b-md bg-tag-red z-10">NEW</div>
+        <div class="p-2 flex flex-col md:flex-row">
+          <div class="rounded-md bg-gray-100 ratio-300-230 flex-shrink-0 bg-cover bg-center w-full md:w-2/5" style="background-image: url(./images/demo-300x230.jpg);">
+            
           </div>
           <div class="p-4">
             <div class="px-8 py-1 bg-m-gold rounded-full inline-block text-white">紙本書</div>
@@ -422,12 +418,10 @@
       </a>
       <a herf='#'
         class="bg-white rounded-md border-gray-300 border relative mt-4 block cursor-pointer hover:shadow-md duration-200">
-        <div class="absolute top-0 right-0 mr-2 text-white px-2 py-1 rounded-b-md bg-tag-red">NEW</div>
-        <div class="p-2 flex">
-          <div class="rounded-md bg-gray-100 ratio-300-230 flex-shrink-0" style="width: 300px;">
-            <div class="flex items-center justify-center">
-              <img src="./images/demo5.png" alt="" class="block">
-            </div>
+        <div class="absolute top-0 right-0 mr-2 text-white px-2 py-1 rounded-b-md bg-tag-red z-10">NEW</div>
+        <div class="p-2 flex flex-col md:flex-row">
+          <div class="rounded-md bg-gray-100 ratio-300-230 flex-shrink-0 bg-cover bg-center w-full md:w-2/5" style="background-image: url(./images/demo-300x230.jpg);">
+            
           </div>
           <div class="p-4">
             <div class="px-8 py-1 bg-m-gold rounded-full inline-block text-white">紙本書</div>
@@ -556,8 +550,22 @@
       $(this).closest('.popPage').addClass('hidden');
     });
 
+    // fontsize switch
+    $('.fontsize-swicth a').click(function (e) {
+      e.preventDefault();
+      const size = $(this).attr('data-size');
+      const article = $('.aritlcle-content')[0];
+      const prefix = 'text-';
 
-    
+      var classes = article.className.split(" ").filter(function (c) {
+        return c.lastIndexOf(prefix, 0) !== 0;
+      });
+      classes.push('text-' + size);
+
+      article.className = $.trim(classes.join(" "));
+
+      $(this).addClass('active').siblings('a').removeClass('active');
+    });
   </script>
 </body>
 

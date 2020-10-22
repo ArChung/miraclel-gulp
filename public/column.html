@@ -367,7 +367,7 @@
     <div class="py-4 mx-auto max-w-830 px-2 mt-2">
       <div class="flex space-x-6">
         <div class="flex-1 aritcle-container leading-8">
-          <img src="./images/demo6.png" alt="" class="rounded-md">
+          <img src="./images/demo6.png" alt="" class="rounded-md w-full">
           <h2 class="my-4 text-lg text-mainb font-bold">Kenneth Wapnick Ph.D.肯尼斯．霍布尼克博士</h2>
           <p>
             肯恩·霍布尼克博士是最初與《奇跡課程》筆錄者海倫共同編輯對談的人士之一，我們目前看到的《奇跡課程》，並不是當初海倫和比爾筆錄的原稿，而是肯恩·霍布尼克花了一整年的時間，與海倫一起把原稿分章斷句地校訂出來的，我們晚進後輩才有福份讀到這本心靈的曠世巨著。<br>
@@ -400,7 +400,7 @@
             
           </div>
         </div>
-        <div class="space-y-6" style="width: 283px;">
+        <div class="space-y-6 md:block hidden" style="width: 283px;">
           <div>
             <div class="bg-m-gold rounded-t-md text-white text-center py-2">
               奇蹟教師
@@ -623,8 +623,22 @@
       $(this).closest('.popPage').addClass('hidden');
     });
 
+    // fontsize switch
+    $('.fontsize-swicth a').click(function (e) {
+      e.preventDefault();
+      const size = $(this).attr('data-size');
+      const article = $('.aritlcle-content')[0];
+      const prefix = 'text-';
 
-    
+      var classes = article.className.split(" ").filter(function (c) {
+        return c.lastIndexOf(prefix, 0) !== 0;
+      });
+      classes.push('text-' + size);
+
+      article.className = $.trim(classes.join(" "));
+
+      $(this).addClass('active').siblings('a').removeClass('active');
+    });
   </script>
 </body>
 

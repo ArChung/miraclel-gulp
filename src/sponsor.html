@@ -206,6 +206,7 @@ footer_style: 2
           <a href='#' class="bg-hash-pink rounded-md py-1 px-4 text-white mx-2">#捐款</a>
         </div>
 
+        <!-- share buttons -->
         <div class="mt-12 flex justify-center">
           <a href="#" class="px-6 btn-up rounded-full mx-2 inline-flex justify-center text-white py-2 text-xl"
             style="background-color: #2d67be;">分享至FB</a>
@@ -221,6 +222,8 @@ footer_style: 2
               </svg>
             </span>收藏文章</a>
         </div>
+        <!-- share buttons end-->
+
       </div>
     </div>
     <hr class="text-gray-400 my-10">
@@ -268,7 +271,7 @@ footer_style: 2
   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-  
+
   // slider
   $('.slider-3').each(function () {
     var t = $(this);
@@ -289,20 +292,5 @@ footer_style: 2
   })
 
 
-  // fontsize switch
-  $('.fontsize-swicth a').click(function (e) {
-      e.preventDefault();
-      const size = $(this).attr('data-size');
-      const article = $('.aritlcle-content')[0];
-      const prefix = 'text-';
-
-      var classes = article.className.split(" ").filter(function (c) {
-        return c.lastIndexOf(prefix, 0) !== 0;
-      });
-      classes.push('text-'+size);
-
-      article.className = $.trim(classes.join(" "));
-
-      $(this).addClass('active').siblings('a').removeClass('active');
-    });
+  
 </script>

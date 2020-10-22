@@ -363,7 +363,7 @@
 
     <hr class="text-gray-400 border-t-2">
 
-    <div class="mt-6 py-10 text-center mx-auto max-w-800 px-8 rounded-md bg-cover leading-8 bg-center"
+    <div class="mt-6 py-10 text-center mx-auto max-w-800 px-2 lg:px-8 rounded-md bg-cover leading-8 bg-center"
       style="background-image: url(./images/bg-card.jpg);">
       <div class="text-mainb">抽卡說明</div>
       <div class="font-bold mt-4">奇蹟卡是你內在本有的答覆。<br>
@@ -543,8 +543,22 @@
       $(this).closest('.popPage').addClass('hidden');
     });
 
+    // fontsize switch
+    $('.fontsize-swicth a').click(function (e) {
+      e.preventDefault();
+      const size = $(this).attr('data-size');
+      const article = $('.aritlcle-content')[0];
+      const prefix = 'text-';
 
-    
+      var classes = article.className.split(" ").filter(function (c) {
+        return c.lastIndexOf(prefix, 0) !== 0;
+      });
+      classes.push('text-' + size);
+
+      article.className = $.trim(classes.join(" "));
+
+      $(this).addClass('active').siblings('a').removeClass('active');
+    });
   </script>
 </body>
 
