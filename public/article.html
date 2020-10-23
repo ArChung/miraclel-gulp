@@ -236,24 +236,26 @@
           <img src="./images/logo.png" alt="">
         </a>
         <div id='mainMenu'
-          class='text-2xl lg:text-base lg:items-center  w-full h-full fixed top-0 left-0 z-50 overflow-y-scroll bg-black bg-opacity-25 lg:bg-transparent lg:relative lg:overflow-y-visible '>
-          <div class='menuInnerContainer bg-m-gold w-2/3 lg:w-full lg:bg-transparent min-h-full flex lg:items-center pt-6 lg:pt-0'>
-            <!-- <div
-              class="clozBtn text-mainb absolute right-0 top-0 mr-8 mt-8 cursor-pointer hover:text-white duration-300 lg:hidden">
-              <svg class='fill-current w-20 h-20 lg:w-12  lg:h-12' xmlns="http://www.w3.org/2000/svg"
+          class='text-2xl lg:text-base lg:items-center  w-full h-full fixed top-0 left-0 z-50 overflow-y-scroll lg:relative lg:overflow-y-visible '>
+          <div class='menuInnerContainer bg-m-gold lg:bg-transparent min-h-full flex lg:items-center pt-6 lg:pt-0'>
+            <div
+              class="clozBtn z-30 text-mainb absolute right-0 top-0 mr-8 mt-8 cursor-pointer hover:text-white duration-300 lg:hidden">
+              <svg class='fill-current w-12 h-12' xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
                   d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
                   clip-rule="evenodd" />
               </svg>
-            </div> -->
-            <ul class='flex items-center ml-4 menu  w-full  flex-col lg:flex-row' >
+            </div>
+            <ul class='flex lg:items-center ml-4 menu  w-full  flex-col lg:flex-row' >
               <li class='relative'><a href="#"
-                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>關於奇蹟課程</a></li>
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold lg:justify-center'>關於奇蹟課程</a></li>
               <li class='relative'><a href="#"
-                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>最新消息</a></li>
-              <li class='relative'><a href="#"
-                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>奇蹟專欄</a>
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold lg:justify-center'>最新消息</a></li>
+              <li class='relative hasSub'><a href="#"
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold lg:justify-center'>奇蹟專欄
+                  <i class="icon down-arr ml-2"></i>
+                </a>
                 <div
                   class='w-full  lg:w-auto lg:absolute text-gray-700 lg:border-t-8 whitespace-no-wrap lg:border-m-gold  lg:bg-white top-full left-0 z-50  subMenu px-3'>
                   <div class="lg:inline-flex flex-col  p-4 flex-shrink-0">
@@ -277,11 +279,11 @@
                 </div>
               </li>
               <li class='relative'><a href="#"
-                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>出版品</a></li>
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold lg:justify-center'>出版品</a></li>
               <li class='relative'><a href="#"
-                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>奇蹟卡</a></li>
+                  class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold lg:justify-center'>奇蹟卡</a></li>
               <li class='relative'>
-                <a href="#" class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold justify-center'>贊助我們</a>
+                <a href="#" class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold lg:justify-center'>贊助我們</a>
               </li>
               
             </ul>
@@ -579,7 +581,7 @@
       $('#mainMenu').toggleClass('show');
     });
 
-    $('#mainMenu').click(function () {
+    $('#mainMenu .clozBtn').click(function () {
       $('#mainMenu').toggleClass('show');
     });
 

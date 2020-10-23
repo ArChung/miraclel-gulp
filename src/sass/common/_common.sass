@@ -58,6 +58,12 @@ input[type=range]::-webkit-slider-thumb:after
   &.heart-icon-btn
     +bg('heart-icon.png')
     margin-top: 4px
+  &.heart-icon-btn
+    +bg('heart-icon.png')
+    margin-top: 4px
+  &.down-arr
+    +bg('arr-right-sm.png')
+    transform: rotate(90deg)
 
 .sideline
   position: relative
@@ -89,25 +95,32 @@ input[type=range]::-webkit-slider-thumb:after
   #mainMenu
     +pad 
       display: none
-      .menuInnerContainer
-        +dTime
-        transform: translate(-100%, 0)
       &.show
         display: block
-        .menuInnerContainer
-          transform: translate(0%, 0)
           
   &.bg-1
     +bgi('index.png')
     background-color: rgba(white,.9)
 
   .menu
+    // .hasSub
+    //   position: relative
+    //   margin-right: 8px
+    //   display: inline-block
+    //   &:before
+    //     content: ''
+    //     +bg('arr-right-sm.png')
+    //     transform: rotate(90deg) translate(-50%,0px)
+    //     position: absolute
+    //     right: 0
+    //     top: 50%
+
     .subMenu
       display: none
       a
         position: relative
-        +pad
-          text-align: center
+        // +pad
+        //   display: inline-block
 
         &:before
           content: ''
