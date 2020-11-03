@@ -196,6 +196,11 @@ $compass-imagehelper-imagesmap: (
     height: '240',
     hash: '0c6f7c744cc2069e41d639ba6cb71d46'
   ),
+  'card.gif': (
+    width: '1000',
+    height: '600',
+    hash: '4e5d31f7cdbcd3c5e14a9f64cadc5c02'
+  ),
   'card.png': (
     width: '61',
     height: '60',
@@ -274,7 +279,7 @@ $compass-imagehelper-imagesmap: (
   'index.png': (
     width: '1540',
     height: '634',
-    hash: '99c36e490a5469d903d1b569d60c3aa2'
+    hash: 'ac538133c9383e712ea02d8e48cc0b14'
   ),
   'index_m.png': (
     width: '768',
@@ -557,6 +562,22 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('card-front.jpg');
 }
 
+%card-gif {
+  // Available properties:
+  // prefix: ;
+  // width: 1000;
+  // height: 600;
+  // filename: card.gif;
+  // basename: card;
+  // dirname: images;
+  // ext: .gif;
+  // path: card.gif;
+  // fullname: card-gif;
+  // mime: image/gif;
+  // hash: 4e5d31f7cdbcd3c5e14a9f64cadc5c02;
+  background-image: image-url('card.gif');
+}
+
 %card-png {
   // Available properties:
   // prefix: ;
@@ -809,7 +830,7 @@ $compass-imagehelper-imagesmap: (
   // path: index.png;
   // fullname: index-png;
   // mime: image/png;
-  // hash: 99c36e490a5469d903d1b569d60c3aa2;
+  // hash: ac538133c9383e712ea02d8e48cc0b14;
   background-image: image-url('index.png');
 }
 

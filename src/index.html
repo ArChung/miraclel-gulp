@@ -4,6 +4,7 @@ layout: ./src/layout.ejs
 engine: ejs
 current: index
 footer_style: 1
+header_style: removeBg
 ---
 
 <!-- content -->
@@ -113,7 +114,8 @@ footer_style: 1
             <h2 class="text-2xl  text-mainb lg:text-xl">在每日生活中為真理作證</h2>
           </div>
           <div class="date text-m-gold">2020-06-28</div>
-          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
+          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>
+            我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
             我一直在兩者之間來回擺盪。
             可以請你談談如何在此刻接受耶？</p>
         </a>
@@ -129,7 +131,8 @@ footer_style: 1
             <h2 class="text-2xl text-mainb lg:text-xl">不帶評判地看著自己的評判不帶評判地看著自己的評判</h2>
           </div>
           <div class="date text-m-gold">2020-06-28</div>
-          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
+          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>
+            我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
             我一直在兩者之間來回擺盪。
             可以請你談談如何在此刻接受耶穌的幫助嗎？</p>
         </a>
@@ -145,7 +148,8 @@ footer_style: 1
             <h2 class="text-2xl text-mainb lg:text-xl">不帶評判地看著自己的評判不帶評判地看著自己的評判</h2>
           </div>
           <div class="date text-m-gold">2020-06-28</div>
-          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
+          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>
+            我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
             我一直在兩者之間來回擺盪。
             可以請你談談如何在此刻接受耶穌的幫助嗎？</p>
         </a>
@@ -161,7 +165,8 @@ footer_style: 1
             <h2 class="text-2xl text-mainb lg:text-xl">不帶評判地看著自己的評判不帶評判地看著自己的評判</h2>
           </div>
           <div class="date text-m-gold">2020-06-28</div>
-          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
+          <p class='text-xl lg:text-base mt-1 text-gray-800 h-24 overflow-hidden'>
+            我感到自己非常渴望愛，但是接受「愛」與「自己的真相」卻讓我更加害怕，寧可退回到小我的陣容，也不願被推到愛裡。
             我一直在兩者之間來回擺盪。</p>
         </a>
       </div>
@@ -357,14 +362,13 @@ footer_style: 1
       speed: 300,
       slidesToShow: 3,
       responsive: [{
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
 
-          }
-        },
-      ]
+        }
+      }, ]
     });
   })
 
@@ -433,4 +437,18 @@ footer_style: 1
 
   var element = document.getElementById('calendar');
   caleandar(element, events, settings);
+
+
+  //  topBtn
+  $(window).on('scroll', function () {
+    const pos = typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement
+      .scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
+
+    if (pos < 400) {
+      $('#header').addClass('removeBg');
+    } else {
+      $('#header').removeClass('removeBg');
+    }
+  })
+  $(window).trigger('scroll');
 </script>

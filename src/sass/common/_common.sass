@@ -49,6 +49,8 @@ input[type=range]::-webkit-slider-thumb:after
   +ratio(2,1)
 .ratio-1-1
   +ratio(1,1)
+.ratio-book
+  +ratio(184,260)
 .icon
   display: inline-block
   vertical-align: text-top
@@ -93,27 +95,29 @@ input[type=range]::-webkit-slider-thumb:after
   +dTime
   background-position: 50% 140px
   #mainMenu
+    @apply text-base items-center relative 
+    
+    +pad
+      @apply text-2xl fixed overflow-y-scroll bg-white
+      top: 113px
+      bottom: 0
+      left: 0
+      right: 0
+
+
     +pad 
       display: none
       &.show
         display: block
           
-  &.bg-1
+  +dTime
+  &:not(.removeBg)
     +bgi('index.png')
-    background-color: rgba(white,.9)
+    background-color: rgba(white,1)
+  
 
   .menu
-    // .hasSub
-    //   position: relative
-    //   margin-right: 8px
-    //   display: inline-block
-    //   &:before
-    //     content: ''
-    //     +bg('arr-right-sm.png')
-    //     transform: rotate(90deg) translate(-50%,0px)
-    //     position: absolute
-    //     right: 0
-    //     top: 50%
+    
 
     .subMenu
       display: none
@@ -141,7 +145,7 @@ input[type=range]::-webkit-slider-thumb:after
         display: block
 
 .slider
-  padding: 0 40px
+  @apply px-8
   .slick-list
     padding-top: 15px
     padding-bottom: 15px
@@ -245,7 +249,10 @@ input[type=range]::-webkit-slider-thumb:after
 
 
 .miracle-card
-  +bg('card-back.jpg')
+  +bgi('card.gif')
+  +coverBg
+  width: 400px
+  +ratio(10,6)
   position: relative
   overflow: hidden
   cursor: pointer
@@ -277,7 +284,7 @@ input[type=range]::-webkit-slider-thumb:after
   .card-container
     +full
     transform-style: preserve-3d
-    +dTime(1s)
+    +dTime(3s)
    
     .card-face
       +full 
@@ -376,7 +383,9 @@ input[type=range]::-webkit-slider-thumb:after
         +bg('bg-6-2.png')
         transform: translate(-50%, -60px)
 
-
+  &.bg-7
+    +bgi('bg-card.jpg')
+    +coverBg
       
 
 
@@ -389,3 +398,51 @@ input[type=range]::-webkit-slider-thumb:after
   +dTime
   &:hover
     transform: scale(.95)
+
+.page-tabs
+  .tab 
+    @apply rounded-t-md bg-gray-300 flex items-center justify-center h-12 text-gray-600
+    &:not(.active):hover
+      font-weight: bold
+    &.active
+      @apply  bg-m-gold text-white
+
+
+.myCard-wrap
+  .myCard
+    .clozBtn
+      @apply cursor-pointer rounded-full bg-m-gold flex items-center w-8 h-8 text-white justify-center
+      .cloz-txt
+        display: none
+      &:hover
+        @apply w-auto px-4 bg-tag-red
+        .cloz-txt
+          display: flex
+        svg
+          display: none
+    &:nth-child(2n)
+      > div
+        +pc
+          @apply flex-row-reverse
+
+
+
+
+.inner-container
+  @apply px-8
+  +pad 
+    @apply px-0
+  .side-warp
+    width: 283px
+    +pad
+      width: 100%
+
+.list-img
+  width: 300px 
+  +pad
+    width: 100%
+
+.banner-img
+  width: 400px 
+  +phone
+    width: 100%

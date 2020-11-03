@@ -1,5 +1,5 @@
 ---
-title: 奇蹟網 | 贊助
+title: 奇蹟網 | 書籍
 layout: ./src/layout.ejs
 engine: ejs
 current: index
@@ -9,18 +9,17 @@ footer_style: 2
 <!-- content -->
 <div class="w-full add-bg bg-0 pt-32 text-gray-900">
   <div class="container mx-auto px-4">
-    <div class='flex'>
+    <div class='flex inner-container'>
       <a href="#" class="px-1">首頁</a>
       <span>></span>
       <a href="#" class="px-1">出版品</a>
       <span>></span>
       <a href="#" class="px-1">奇蹟課程序言行旅</a>
     </div>
-    <h1 class="text-4xl text-center tracking-wide py-10">紙本書</h1>
-    <hr class="text-gray-400 border-t-2">
-    <div class="py-4 mx-auto max-w-800">
-      <div class="flex space-x-8 flex-col md:flex-row">
-        <div class="w-full md:w-1/2 bg-cover bg-center ratio-1-1"
+    <hr class="text-gray-400 border-t-2 mt-4">
+    <div class="py-4 mx-auto inner-container">
+      <div class="flex space-x-8 flex-col md:flex-row ">
+        <div class="banner-img bg-cover bg-center ratio-1-1"
           style='background-image: url(./images/demo-400x400.jpg);'></div>
         <div class="pt-4">
           <div class="text-2xl">奇蹟課程序言行旅</div>
@@ -103,41 +102,42 @@ footer_style: 2
       </div>
     </div>
     <hr class="text-gray-400 my-10">
-    <div class="text-center text-3xl tracking-wider">您可能也喜歡這些文章</div>
-    <div class="slider slider-3">
-      <div class="slide-item hoverUp px-2">
-        <a href="#" class='block rounded-md shadow bg-white'>
-          <div class="pic bg-cover bg-center  ratio-2-1" style='background-image: url(./images/demo4.png);'></div>
-          <div class="flex p-2 h-24 overflow-hidden my-1 lg:h-12  " style="min-height: 5rem;">
-            <h2 class="text-2xl  text-mainb lg:text-xl">不帶評判地看著自己的評判</h2>
-          </div>
+    <div class="text-center text-3xl tracking-wider">為您推薦</div>
+    <div class="slider slider-5">
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
         </a>
       </div>
-      <div class="slide-item hoverUp px-2">
-        <a href="#" class='block rounded-md shadow bg-white'>
-          <div class="pic bg-cover bg-center  ratio-2-1" style='background-image: url(./images/demo4.png);'></div>
-          <div class="flex p-2 h-24 overflow-hidden my-1 lg:h-12  " style="min-height: 5rem;">
-            <h2 class="text-2xl  text-mainb lg:text-xl">不帶評判地看著自己的評判</h2>
-          </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
         </a>
       </div>
-      <div class="slide-item hoverUp px-2">
-        <a href="#" class='block rounded-md shadow bg-white'>
-          <div class="pic bg-cover bg-center  ratio-2-1" style='background-image: url(./images/demo4.png);'></div>
-          <div class="flex p-2 h-24 overflow-hidden my-1 lg:h-12  " style="min-height: 5rem;">
-            <h2 class="text-2xl  text-mainb lg:text-xl">到底該怎麼做？我怎麼才能「與祂進入神聖一刻」?
-            </h2>
-          </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
         </a>
       </div>
-      <div class="slide-item hoverUp px-2">
-        <a href="#" class='block rounded-md shadow bg-white'>
-          <div class="pic bg-cover bg-center  ratio-2-1" style='background-image: url(./images/demo4.png);'></div>
-          <div class="flex p-2 h-24 overflow-hidden my-1 lg:h-12  " style="min-height: 5rem;">
-            <h2 class="text-2xl  text-mainb lg:text-xl">不帶評判地看著自己的評判</h2>
-          </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
         </a>
       </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
+        </a>
+      </div>
+      <div class="slide-item hoverUp px-3">
+        <a href="#" class='rounded-md shadow'>
+          <img src="./images/demo2.png" alt="" class='w-full'>
+        </a>
+      </div>
+      
+      
+      
+      
 
     </div>
   </div>
@@ -148,21 +148,29 @@ footer_style: 2
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
   // slider
-  $('.slider-3').each(function () {
+  $('.slider-5').each(function () {
     var t = $(this);
     t.slick({
       dots: true,
       infinite: true,
       speed: 300,
-      slidesToShow: 3,
+      slidesToShow: 5,
       responsive: [{
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
 
-        }
-      }, ]
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+      ]
     });
   })
 </script>
