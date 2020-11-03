@@ -94,21 +94,26 @@ input[type=range]::-webkit-slider-thumb:after
 #header
   +dTime
   background-position: 50% 140px
+  .header-container
+    @apply bg-white bg-opacity-50
+    &.white
+      @apply bg-white bg-opacity-100
   #mainMenu
     @apply text-base items-center relative 
-    
     +pad
-      @apply text-2xl fixed overflow-y-scroll bg-white
-      top: 113px
-      bottom: 0
+      @apply text-xl fixed overflow-y-scroll bg-white
+      top: 0
       left: 0
-      right: 0
-
-
+      width: 100%
+      height: 100%
+      z-index: -1
+      padding-top: 130px
+      transform: translate(0, -100%)
+      +dTime(.4s)
     +pad 
-      display: none
       &.show
-        display: block
+        transform: translate(0, 0%)
+
           
   +dTime
   &:not(.removeBg)
@@ -117,8 +122,6 @@ input[type=range]::-webkit-slider-thumb:after
   
 
   .menu
-    
-
     .subMenu
       display: none
       a

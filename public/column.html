@@ -229,7 +229,7 @@
 
   <!-- navbar -->
   <header id='header' class='fixed w-full z-40 text-2xl lg:text-base'>
-  <div class="bg-white w-full z-50 bg-opacity-50">
+  <div class="header-container w-full z-50">
     <div class="container mx-auto py-1 flex text-mainb font-bold relative justify-between px-4">
       <div class="flex items-center">
         <a href="#">
@@ -238,7 +238,7 @@
         <div id='mainMenu' 
           class=''>
           <div class='menuInnerContainer min-h-full flex lg:items-center pt-6 lg:pt-0'>
-            <div
+            <!-- <div
               class="clozBtn z-30 text-mainb absolute right-0 top-0 mr-8 mt-8 cursor-pointer hover:text-white duration-300 lg:hidden">
               <svg class='fill-current w-12 h-12' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                 fill="currentColor">
@@ -246,7 +246,7 @@
                   d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
                   clip-rule="evenodd" />
               </svg>
-            </div>
+            </div> -->
             <ul class='flex lg:items-center ml-4 menu  w-full  flex-col lg:flex-row'>
               <li class='relative'><a href="#"
                   class='flex items-center lg:h-16 p-5 lg:hover:text-m-gold lg:justify-center'>關於奇蹟課程</a></li>
@@ -320,11 +320,11 @@
           <a href="#" class='p-2 hover:text-m-gold flex items-center'>簡體</a>
         </li>
         <li class="relative lg:hidden" id='m_menuBtn'>
-          <a href="#" class=' mr-1 hover:text-m-gold p-2 flex items-center'>
+          <div  class=' mr-1 hover:text-m-gold p-2 flex items-center cursor-pointer'>
             <svg class='fill-current w-12 h-12' fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-          </a>
+          </div>
         </li>
       </ul>
     </div>
@@ -594,11 +594,19 @@
 
     // moblie menu
     $('#m_menuBtn').click(function () {
+      if($('#mainMenu').hasClass('show')){
+        unLockScroll();
+      }else{
+        lockScroll();
+      }
       $('#mainMenu').toggleClass('show');
+      $('.header-container').toggleClass('white');
+      
     });
 
     $('#mainMenu .clozBtn').click(function () {
       $('#mainMenu').toggleClass('show');
+      
     });
 
     //  topBtn
@@ -637,6 +645,45 @@
 
       $(this).addClass('active').siblings('a').removeClass('active');
     });
+
+
+    function lockScroll() {
+
+      var scrollPosition = [
+        self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+        self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      ];
+      var html = jQuery('body'); // it would make more sense to apply this to body, but IE7 won't have that
+      html.data('scroll-position', scrollPosition);
+      html.data('previous-overflow', html.css('overflow'));
+      html.css('overflow', 'hidden');
+      window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
+      $(document.body).on("touchmove", preventScroll);
+    }
+
+    function unLockScroll() {
+      var html = jQuery('body');
+      var scrollPosition = html.data('scroll-position');
+
+      if (!isNull(scrollPosition)) {
+        html.css('overflow', html.data('previous-overflow'));
+        window.scrollTo(scrollPosition[0], scrollPosition[1]);
+        $(document.body).off("touchmove", preventScroll);
+      }
+
+
+    }
+
+    function preventScroll(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    function isNull(val) {
+        return (typeof(val) === "undefined")
+    }
+
   </script>
 </body>
 
