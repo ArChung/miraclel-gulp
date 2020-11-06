@@ -98,9 +98,10 @@ input[type=range]::-webkit-slider-thumb:after
   .header-container
     +dTime
     @apply bg-white bg-opacity-50
-    background-position: 50% 140px
+    +coverBg
+    // background-position: 50% -250px
     &:not(.removeBg)
-      +bgi('index.png')
+      +bgi('bg-header.jpg')
       @apply bg-opacity-100
   
   #m_menuBtn
@@ -109,7 +110,7 @@ input[type=range]::-webkit-slider-thumb:after
 
   &.moblie_active
     .header-container
-      +bgi('index.png')
+      +bgi('bg-header.jpg') 
       @apply bg-opacity-100
       #mainMenu
         .menuInnerContainer
