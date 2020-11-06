@@ -93,8 +93,8 @@ input[type=range]::-webkit-slider-thumb:after
     transform: translate(0%, -50%)
 
 #header
-  +dTime
- 
+  +dTime(.6s)
+  height: 113px
   .header-container
     +dTime
     @apply bg-white bg-opacity-50
@@ -102,75 +102,106 @@ input[type=range]::-webkit-slider-thumb:after
     &:not(.removeBg)
       +bgi('index.png')
       @apply bg-opacity-100
-      
-    // @apply bg-white bg-opacity-50
-    // &.white
-    //   @apply bg-white bg-opacity-100
+  
+  #m_menuBtn
+    .cloz
+      display: none
+
+  &.moblie_active
+    .header-container
+      +bgi('index.png')
+      @apply bg-opacity-100
+      #mainMenu
+        .menuInnerContainer
+          max-height: calc(100% - 113px)
+          padding: 25px 0
+      #m_menuBtn
+        .open
+          display: none
+        .cloz
+          display: block
+
   #mainMenu
     @apply text-base items-center relative 
-    +pad
-      @apply text-xl fixed overflow-y-scroll 
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      z-index: -1
+    .menuInnerContainer
+      +pad
+        position: fixed
+        top: 113px
+        width: 100%
+        left: 0
+        background-color: #fff
+        padding: 0
+        max-height: 0
+        overflow-y: scroll
+        box-sizing: border-box
+        +dTime
+    // +pad
+    //   @apply text-xl fixed overflow-y-scroll 
+    //   top: 0
+    //   left: 0
+    //   width: 100%
+    //   // height: 100%
+    //   z-index: -1
       
-      .menuInnerContainer
-        +dTime(.4s)
-        transform: translate(0, -100%)
-        @apply bg-white
-        padding-top: 113px
-        padding-bottom: 25px
+    //   .menuInnerContainer
+    //     position: absolute
+    //     top: 0
+    //     left: 0
+    //     width: 100%
+    //     +dTime(.4s)
+    //     transform: translate(0, -100%)
+    //     @apply bg-white
+    //     padding-top: 113px
+    //     padding-bottom: 25px
 
 
-    +pad 
-      &.show
-        @apply bg-black bg-opacity-25
-        .menuInnerContainer
-          transform: translate(0, 0%)
+    // +pad 
+    //   &.show
+    //     .menuInnerContainer
+    //       transform: translate(0, 0%)
 
           
-  +dTime
   
   
 
   .menu
-    .subMenu 
-      @apply text-gray-700 whitespace-no-wrap px-3
-      top: 100%
-      display: none
-      width: auto
-      
-      +onPad
+    .hasSub
+      .subMenu 
+        @apply text-gray-700 whitespace-no-wrap px-3
+        top: 100%
+        display: none
+        width: auto
         position: absolute
         @apply border-t-8 bg-white border-m-gold z-50  
 
+        a
+          position: relative
+          // +pad
+          //   display: inline-block
 
-      a
-        position: relative
-        // +pad
-        //   display: inline-block
-
-        &:before
-          content: ''
-          +bg('arr-right-sm.png')
-          position: absolute
-          left: -10px
-          top: 10px
-          opacity: 0
-        &:hover
           &:before
-            left: -4px
-            opacity: 1
-            +dTime(.1s)
-      +pad
+            content: ''
+            +bg('arr-right-sm.png')
+            position: absolute
+            left: -10px
+            top: 10px
+            opacity: 0
+          &:hover
+            &:before
+              left: -4px
+              opacity: 1
+              +dTime(.1s)
         &.active
-          display: block          
-    +onPad
-      .hasSub:hover
-        .subMenu
           display: block
+      +onPad
+        &:hover
+          .subMenu
+            display: block
+  .menuInnerContainer
+    .hasSub
+      .subMenu 
+        +pad
+          @apply border-0 relative top-0
 
 .slider
   @apply px-8
