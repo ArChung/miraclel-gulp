@@ -141,6 +141,11 @@ $compass-imagehelper-imagesmap: (
     height: '40',
     hash: '6eccc73630ccfd8d93ece3c88181f984'
   ),
+  'bg-0.png': (
+    width: '1140',
+    height: '582',
+    hash: 'bdc846e9c1507fd4f992ff7adaca6f0c'
+  ),
   'bg-1.png': (
     width: '613',
     height: '740',
@@ -180,6 +185,11 @@ $compass-imagehelper-imagesmap: (
     width: '735',
     height: '905',
     hash: '118f2526e6547351cbea75dab16ec0b1'
+  ),
+  'bg-header.jpg': (
+    width: '1140',
+    height: '113',
+    hash: '939ac37ba5f93b2fd36b60b807f0a116'
   ),
   'bg0.jpg': (
     width: '1140',
@@ -386,6 +396,22 @@ $compass-imagehelper-imagesmap: (
   background-image: image-url('arr-right.png');
 }
 
+%bg-0-png {
+  // Available properties:
+  // prefix: ;
+  // width: 1140;
+  // height: 582;
+  // filename: bg-0.png;
+  // basename: bg-0;
+  // dirname: images;
+  // ext: .png;
+  // path: bg-0.png;
+  // fullname: bg-0-png;
+  // mime: image/png;
+  // hash: bdc846e9c1507fd4f992ff7adaca6f0c;
+  background-image: image-url('bg-0.png');
+}
+
 %bg-1-png {
   // Available properties:
   // prefix: ;
@@ -512,6 +538,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/jpeg;
   // hash: 118f2526e6547351cbea75dab16ec0b1;
   background-image: image-url('bg-card.jpg');
+}
+
+%bg-header-jpg {
+  // Available properties:
+  // prefix: ;
+  // width: 1140;
+  // height: 113;
+  // filename: bg-header.jpg;
+  // basename: bg-header;
+  // dirname: images;
+  // ext: .jpg;
+  // path: bg-header.jpg;
+  // fullname: bg-header-jpg;
+  // mime: image/jpeg;
+  // hash: 939ac37ba5f93b2fd36b60b807f0a116;
+  background-image: image-url('bg-header.jpg');
 }
 
 %bg0-jpg {

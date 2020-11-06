@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="css/all.css">
 </head>
 
-<body>
+<body class="<% if (typeof body_class == 'string' && body_class){%><%- body_class %><%} %>">
   <!-- sider -->
   <% include conponents/popup %>
   <!-- sider END-->
