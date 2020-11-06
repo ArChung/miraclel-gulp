@@ -15,7 +15,7 @@ header_style: removeBg
         不要企圖評估聖子的價值，他是上主的神聖造化，否則你就等於是在評論他的天父而跟祂作對了。
       </h2>
       <h2 class='text-xl mt-2'>T-14.III.15:1</h2>
-      <a href="#"
+      <a href="./card.html"
         class='btn bg-mainb rounded-full text-white h-12 px-8 text-xl inline-flex items-center mt-5 hover:bg-mainb-light'>抽一張屬於我的奇蹟卡<span
           class='card'></span></a>
     </div>
@@ -353,6 +353,20 @@ header_style: removeBg
 <script src="./js/lib/caleandar.min.js"></script>
 
 <script>
+  //  topBtn
+  $(window).on('scroll', function () {
+    const pos = typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement
+      .scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
+    console.log(pos);
+    if (pos < 400) {
+      $('#header .header-container').addClass('removeBg');
+    } else {
+      $('#header .header-container').removeClass('removeBg');
+    }
+  })
+  $(window).trigger('scroll');
+
+
   // slider
   $('.slider-3').each(function () {
     var t = $(this);
@@ -439,16 +453,5 @@ header_style: removeBg
   caleandar(element, events, settings);
 
 
-  //  topBtn
-  $(window).on('scroll', function () {
-    const pos = typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement
-      .scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
-
-    if (pos < 400) {
-      $('#header').addClass('removeBg');
-    } else {
-      $('#header').removeClass('removeBg');
-    }
-  })
-  $(window).trigger('scroll');
+  
 </script>

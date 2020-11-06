@@ -1,6 +1,6 @@
 html,body
   overflow-x: hidden
-  height: 100%
+  // height: 100%
 
 html
   --plyr-color-main: #2f4c6a
@@ -94,37 +94,59 @@ input[type=range]::-webkit-slider-thumb:after
 
 #header
   +dTime
-  background-position: 50% 140px
+ 
   .header-container
+    +dTime
     @apply bg-white bg-opacity-50
-    &.white
-      @apply bg-white bg-opacity-100
+    background-position: 50% 140px
+    &:not(.removeBg)
+      +bgi('index.png')
+      @apply bg-opacity-100
+      
+    // @apply bg-white bg-opacity-50
+    // &.white
+    //   @apply bg-white bg-opacity-100
   #mainMenu
     @apply text-base items-center relative 
     +pad
-      @apply text-xl fixed overflow-y-scroll bg-white
+      @apply text-xl fixed overflow-y-scroll 
       top: 0
       left: 0
       width: 100%
       height: 100%
       z-index: -1
-      padding-top: 130px
-      transform: translate(0, -100%)
-      +dTime(.4s)
+      
+      .menuInnerContainer
+        +dTime(.4s)
+        transform: translate(0, -100%)
+        @apply bg-white
+        padding-top: 113px
+        padding-bottom: 25px
+
+
     +pad 
       &.show
-        transform: translate(0, 0%)
+        @apply bg-black bg-opacity-25
+        .menuInnerContainer
+          transform: translate(0, 0%)
 
           
   +dTime
-  &:not(.removeBg)
-    +bgi('index.png')
-    background-color: rgba(white,1)
+  
   
 
   .menu
-    .subMenu
+    .subMenu 
+      @apply text-gray-700 whitespace-no-wrap px-3
+      top: 100%
       display: none
+      width: auto
+      
+      +onPad
+        position: absolute
+        @apply border-t-8 bg-white border-m-gold z-50  
+
+
       a
         position: relative
         // +pad
@@ -137,16 +159,18 @@ input[type=range]::-webkit-slider-thumb:after
           left: -10px
           top: 10px
           opacity: 0
-            
         &:hover
           &:before
             left: -4px
             opacity: 1
             +dTime(.1s)
-
-    >li:hover
-      .subMenu
-        display: block
+      +pad
+        &.active
+          display: block          
+    +onPad
+      .hasSub:hover
+        .subMenu
+          display: block
 
 .slider
   @apply px-8

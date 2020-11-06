@@ -81,19 +81,27 @@
 
     // moblie menu
     $('#m_menuBtn').click(function () {
-      if($('#mainMenu').hasClass('show')){
-        unLockScroll();
-      }else{
-        lockScroll();
+      if ($('#mainMenu').hasClass('show')) {
+        // unLockScroll();
+        $('.header-container').addClass('removeBg');
+        $(window).trigger('scroll');
+
+
+      } else {
+        // lockScroll();
+        $('.header-container').removeClass('removeBg');
+
       }
       $('#mainMenu').toggleClass('show');
-      $('.header-container').toggleClass('white');
-      
+
     });
 
     $('#mainMenu .clozBtn').click(function () {
       $('#mainMenu').toggleClass('show');
-      
+    });
+
+    $('#header .hasSub').click(function () {
+      $(this).find('.subMenu').toggleClass('active');
     });
 
     //  topBtn
@@ -142,9 +150,12 @@
       ];
       var html = $('body'); // it would make more sense to apply this to body, but IE7 won't have that
       // html.css('height','100%');
-      html.data('scroll-position', scrollPosition);
+      html.attr('data-scroll-position', scrollPosition);
       html.data('previous-overflow', html.css('overflow'));
+      // $('html').css('height', '100%');
+      // html.css('height', '100%');
       html.css('overflow', 'hidden');
+
       window.scrollTo(scrollPosition[0], scrollPosition[1]);
 
       $(document.body).on("touchmove", preventScroll);
@@ -152,10 +163,12 @@
 
     function unLockScroll() {
       var html = jQuery('body');
-      var scrollPosition = html.data('scroll-position');
+      var scrollPosition = html.attr('data-scroll-position');
 
       if (!isNull(scrollPosition)) {
         html.css('overflow', html.data('previous-overflow'));
+        // $('html').css('height', 'auto');
+        // html.css('height', 'auto');
         window.scrollTo(scrollPosition[0], scrollPosition[1]);
         $(document.body).off("touchmove", preventScroll);
       }
@@ -164,14 +177,27 @@
     }
 
     function preventScroll(e) {
-        e.preventDefault();
-        e.stopPropagation();
+      e.preventDefault();
+      e.stopPropagation();
     }
 
     function isNull(val) {
-        return (typeof(val) === "undefined")
+      return (typeof (val) === "undefined")
     }
 
+    function initPops() {
+      $('.popupBtn').click(function (e) {
+        e.preventDefault();
+
+        var t = $(this);
+        var popId = t.attr('data-popid');
+
+        $('.popPage').addClass('hidden');
+        $('#pop-' + popId).removeClass('hidden');
+      });
+    }
+
+    initPops();
   </script>
 </body>
 

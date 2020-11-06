@@ -1,5 +1,5 @@
 <!-- login : remove hidden class to show-->
-<div
+<div id='pop-login'
   class="popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 hidden">
   <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
     <!-- clozBtn -->
@@ -20,18 +20,18 @@
           <i class="fb-icon-btn icon mr-2"></i> 快速註冊 / 登入
         </a>
         <div class="sideline text-center text-sm">OR</div>
-        <input type="email" name="emal" id="email" placeholder="Email / 帳號"
+        <input type="email" name="emal" placeholder="Email / 帳號"
           class='w-full mt-4 py-2 rounded-full px-4 border border-gray-400'>
         <!-- border-red-600 & border-2 for error input -->
-        <input type="password" name="password" id="password" placeHolder="密碼"
+        <input type="password" name="password"  placeHolder="密碼"
           class='w-full mt-4 py-2 rounded-full px-4 border-red-600 border-2'>
         <div class="text-red-600 mt-1">*必填欄位</div>
         <input type="submit" value="登入"
           class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
 
         <div class="flex justify-center mt-4">
-          <a href="#" class='text-m-orange mx-2 hover:underline'>註冊會員</a>
-          <a href="#" class='text-m-orange mx-2 hover:underline'>忘記密碼</a>
+          <a href="#" class='text-m-orange mx-2 hover:underline popupBtn' data-popid='signup'>註冊會員</a>
+          <a href="#" class='text-m-orange mx-2 hover:underline popupBtn' data-popid='forget'>忘記密碼</a>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
 
 
 <!-- email sign up : remove hidden class to show-->
-<div
+<div id='pop-signup'
   class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
   <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
     <!-- clozBtn -->
@@ -58,9 +58,9 @@
       <h2 class="text-2xl text-center">Email註冊</h2>
       <hr class="text-gray-400 mt-4">
       <div class="px-2 pt-4 md:px-48">
-        <input type="email" name="emal" id="email" placeholder="Email / 帳號"
+        <input type="email" name="emal" placeholder="Email / 帳號"
           class='w-full mt-4 py-2 rounded-full px-4 border border-gray-400'>
-        <input type="password" name="password" id="password" placeHolder="密碼"
+        <input type="password" name="password"  placeHolder="密碼"
           class='w-full mt-4 py-2 rounded-full px-4 border border-gray-400'>
         <input type="submit" value="註冊會員"
           class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
@@ -76,7 +76,7 @@
 
 
 <!-- forget password : remove hidden class to show-->
-<div
+<div id='pop-forget'
   class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
   <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
     <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
@@ -93,10 +93,10 @@
       <div class="px-2 md:px-32 text-center pt-4">請輸入您註冊時所填寫的e-mail，<br>
         我們會立即發送密碼重新設定信到您的e-mail信箱。</div>
       <div class="px-2 pt-4 md:px-48">
-        <input type="email" name="emal" id="email" placeholder="請輸入註冊時填寫的Email"
+        <input type="email" name="emal"  placeholder="請輸入註冊時填寫的Email"
           class='w-full py-2 rounded-full px-4 border border-gray-400'>
         <input type="submit" value="確認"
-          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75 popupBtn' data-popid='passwordSend'>
       </div>
     </div>
   </div>
@@ -104,7 +104,7 @@
 
 
 <!-- password send : remove hidden class to show -->
-<div
+<div id='pop-passwordSend'
   class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
   <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
     <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
@@ -123,7 +123,7 @@
         為維護您的隱私及權益，信件連結將於密碼重設或24小時後失效。</div>
       <div class="px-2 pt-4 md:px-48">
         <input type="submit" value="確認"
-          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75'>
+          class='w-full rounded-full bg-m-gold text-center text-white py-2 min-w-40 block mt-4 cursor-pointer hover:bg-opacity-75 clozBtn'>
       </div>
     </div>
   </div>
@@ -132,7 +132,7 @@
 
 
 <!-- lesson : remove hidden class to show -->
-<div
+<div id='pop-lessonSetting'
   class="hidden popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
   <div class="container relative max-w-screen-md bg-white px-10 py-12 border-mainb border-2 rounded-lg">
     <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
@@ -144,7 +144,7 @@
     </div>
 
     <div>
-      <h2 class="text-2xl text-center">密碼發送</h2>
+      <h2 class="text-2xl text-center">每日一課設定</h2>
       <hr class="text-gray-400 mt-4">
       <div class="px-2 pt-4 md:px-48">
         <div class="flex justify-center items-center">
@@ -178,6 +178,3 @@
     </div>
   </div>
 </div>
-
-
-

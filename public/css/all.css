@@ -25052,7 +25052,6 @@ video {
 
 html, body {
   overflow-x: hidden;
-  height: 100%;
 }
 
 html {
@@ -25266,21 +25265,21 @@ input[type=range]::-webkit-slider-thumb:after {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  background-position: 50% 140px;
   transition: all 0.3s;
 }
 
 #header .header-container {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   --bg-opacity: 1;
   background-color: #fff;
   background-color: rgba(255, 255, 255, var(--bg-opacity));
-  --bg-opacity: 0.5
+  --bg-opacity: 0.5;    background-position: 50% 140px;
 }
 
-#header .header-container.white {
-  --bg-opacity: 1;
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, var(--bg-opacity));
+#header .header-container:not(.removeBg) {
+  background-image: url("../images/index.png");
   --bg-opacity: 1
 }
 
@@ -25296,39 +25295,65 @@ input[type=range]::-webkit-slider-thumb:after {
   #header #mainMenu {
     font-size: 1.25rem;
     position: fixed;
-    overflow-y: scroll;
-    --bg-opacity: 1;
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, var(--bg-opacity));        top: 0;
+    overflow-y: scroll;        top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    padding-top: 130px;
-    -webkit-transform: translate(0, -100%);
-        -ms-transform: translate(0, -100%);
-            transform: translate(0, -100%);
+  }
+
+  #header #mainMenu .menuInnerContainer {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
+    -webkit-transform: translate(0, -100%);
+        -ms-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+    --bg-opacity: 1;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, var(--bg-opacity));          padding-top: 113px;
+    padding-bottom: 25px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   #header #mainMenu.show {
+    --bg-opacity: 1;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, var(--bg-opacity));
+    --bg-opacity: 0.25
+  }
+
+  #header #mainMenu.show .menuInnerContainer {
     -webkit-transform: translate(0, 0%);
         -ms-transform: translate(0, 0%);
             transform: translate(0, 0%);
   }
 }
 
-#header:not(.removeBg) {
-  background-image: url("../images/index.png");
-  background-color: white;
+#header .menu .subMenu {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+  white-space: nowrap;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;    top: 100%;
+  display: none;
+  width: auto;
 }
 
-#header .menu .subMenu {
-  display: none;
+@media screen and (min-width: 1025px) {
+  #header .menu .subMenu {
+    position: absolute;
+    border-top-width: 8px;
+    --bg-opacity: 1;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, var(--bg-opacity));
+    --border-opacity: 1;
+    border-color: #c9b262;
+    border-color: rgba(201, 178, 98, var(--border-opacity));
+    z-index: 50
+  }
 }
 
 #header .menu .subMenu a {
@@ -25354,8 +25379,16 @@ input[type=range]::-webkit-slider-thumb:after {
   transition: all 0.1s;
 }
 
-#header .menu > li:hover .subMenu {
-  display: block;
+@media screen and (max-width: 1024px) {
+  #header .menu .subMenu.active {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #header .menu .hasSub:hover .subMenu {
+    display: block;
+  }
 }
 
 .slider {

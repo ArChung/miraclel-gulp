@@ -5,6 +5,9 @@
 =phone 
 	@media screen and (max-width: $phone)
 		@content 
+=onPad
+	@media screen and (min-width: $pad+1)
+		@content
 =pc 
 	@media screen and (min-width: $phone+1)
 		@content 	
