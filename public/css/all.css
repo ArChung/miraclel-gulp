@@ -25205,6 +25205,13 @@ input[type=range]::-webkit-slider-thumb:after {
   margin-top: 1px;
 }
 
+.icon.google-icon-btn {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/g-icon.png");
+  margin-top: 1px;
+}
+
 .icon.heart-icon-btn {
   width: 22px;
   height: 19px;

@@ -281,6 +281,11 @@ $compass-imagehelper-imagesmap: (
     height: '121',
     hash: 'fc88f2662767991af8b070b5f0cbde88'
   ),
+  'g-icon.png': (
+    width: '20',
+    height: '20',
+    hash: '8be2d641e1a247a5417a12165bc7c06d'
+  ),
   'heart-icon.png': (
     width: '22',
     height: '19',
@@ -842,6 +847,22 @@ $compass-imagehelper-imagesmap: (
   // mime: image/png;
   // hash: fc88f2662767991af8b070b5f0cbde88;
   background-image: image-url('fbIcon-2.png');
+}
+
+%g-icon-png {
+  // Available properties:
+  // prefix: ;
+  // width: 20;
+  // height: 20;
+  // filename: g-icon.png;
+  // basename: g-icon;
+  // dirname: images;
+  // ext: .png;
+  // path: g-icon.png;
+  // fullname: g-icon-png;
+  // mime: image/png;
+  // hash: 8be2d641e1a247a5417a12165bc7c06d;
+  background-image: image-url('g-icon.png');
 }
 
 %heart-icon-png {
