@@ -415,7 +415,8 @@
 <!-- card popup : remove hidden class to show -->
 <div
   class="hidden cardPop popPage fixed w-full h-full top-0 left-0 z-50 bg-black bg-opacity-75 px-2 flex justify-center items-start pt-16 ">
-  <div class="container relative max-w-screen-md px-10 py-12 border-mainb border-2 rounded-lg bg-cover" style="background-image: url(./images/bg-card.jpg);">
+  <div class="container relative max-w-screen-md px-10 py-12 border-mainb border-2 rounded-lg bg-cover"
+    style="background-image: url(./images/bg-card.jpg);">
 
     <div class="clozBtn text-mainb absolute right-0 top-0 mr-4 mt-4 cursor-pointer hover:text-mainb-light duration-300">
       <svg class='fill-current w-12 h-12 ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -427,7 +428,15 @@
 
     <div class="miracle-card-filp mx-auto rounded-md">
       <div class="card-container">
-        <div class="card-face card-front" style="background-image: url(./images/card-front.jpg);"></div>
+        <!-- <div class="card-face card-front" style="background-image: url(./images/card-front.jpg);"></div> -->
+        <div class="card-face card-front" style="">
+          <div class="relative">
+            <img src="./images/card-front.jpg" alt="" class="rounded-md w-full" />
+            <div class="absolute w-full text-lg text-white top-0 left-0 pl-20 pr-10 pt-16 pb-4 h-full overflow-hidden">
+              測試
+            </div>
+          </div>
+        </div>
         <div class="card-face card-back" style="background-image: url(./images/card-back.jpg);"></div>
       </div>
     </div>
@@ -457,7 +466,7 @@
               clip-rule="evenodd" />
           </svg>
         </span>收藏卡片</a>
-        <a href="#" class="px-6 btn-up rounded-full mx-2 inline-flex justify-center text-white py-2 text-xl"
+      <a href="#" class="px-6 btn-up rounded-full mx-2 inline-flex justify-center text-white py-2 text-xl"
         style="background-color: #2d67be;">分享至FB</a>
     </div>
 
