@@ -1,0 +1,46 @@
+add---
+title: 奇蹟網 | 搜尋結果
+layout: ./src/layout.ejs
+engine: ejs
+current: index
+footer_style: 2
+---
+
+<!-- content -->
+<div class="w-full add-bg bg-0 pt-32 text-gray-900">
+  <div class="container mx-auto px-4">
+    <div class='flex inner-container'>
+      <a href="#" class="px-1">首頁</a>
+      <span>></span>
+      <a href="#" class="px-1">出版品</a>
+    </div>
+    <h1 class="text-4xl text-center tracking-wide pt-10">搜尋結果</h1>
+    <div class="mt-4 flex justify-center rounded-full max-w-xl  mx-auto border overflow-hidden relative">
+      <div class="absolute inset-y-0 flex items-center left-0 ml-4">
+        <svg class="fill-current w-8 h-8 lg:w-6 lg:h-6 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </div>
+      <input type="search" placeholder="正文" class='w-full pl-12'>
+      <input type="submit" value="搜尋" class='bg-mainb text-white py-3 px-8 hover:bg-mainb-light cursor-pointer text-lg'>
+    </div>
+
+    <hr class="text-gray-400 border-t-2 my-6">
+    <div class="py-4 mx-auto px-2 mt-2">
+      <div class="flex lg:space-x-6 lg:flex-row flex-col inner-container">
+        <div class="flex-1  leading-8 space-y-6">
+            <div class="lg:p-10 text-left lg:text-center text-xl">
+                <p>很抱歉，我們沒有找到相關的商品及資訊。</p>
+                <p>確認您所輸入的字詞，或是調整一下關鍵字試試看吧 !</p>
+            </div>
+            <!-- content end-->
+        </div>
+      </div>
+    </div>
+    <hr class="text-gray-400 border-t-2 my-10">
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
