@@ -140,17 +140,17 @@
     // fontsize switch
     $('.fontsize-swicth a').click(function (e) {
       e.preventDefault();
-      const size = $(this).attr('data-size');
+      const sizes = $(this).attr('data-size');
       const article = $('.aritlcle-content')[0];
       const prefix = 'text-';
 
       var classes = article.className.split(" ").filter(function (c) {
-        return c.lastIndexOf(prefix, 0) !== 0;
+        return c.indexOf(prefix) < 0;
       });
-      classes.push('text-' + size);
 
+      classes = classes.concat(sizes.split(" "))
       article.className = $.trim(classes.join(" "));
-
+      
       $(this).addClass('active').siblings('a').removeClass('active');
     });
 

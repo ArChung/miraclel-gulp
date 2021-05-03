@@ -25822,6 +25822,7 @@ input[type=range]::-webkit-slider-thumb:after {
   width: 40px;
   height: 40px;
   background-image: url("../images/arr-right.png");
+  background-image: url(../images/arr-right.png) !important;
   right: 0px;
 }
 
@@ -25833,6 +25834,7 @@ input[type=range]::-webkit-slider-thumb:after {
   width: 40px;
   height: 40px;
   background-image: url("../images/arr-left.png");
+  background-image: url(../images/arr-left.png) !important;
   left: 0px;
 }
 

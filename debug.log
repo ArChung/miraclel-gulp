@@ -3,3 +3,5 @@
 [1022/195801.378:ERROR:directory_reader_win.cc(43)] FindFirstFile: ╰参тぃ﹚隔畖 (0x3)
 [1102/180636.332:ERROR:directory_reader_win.cc(43)] FindFirstFile: ╰参тぃ﹚隔畖 (0x3)
 [1102/204920.949:ERROR:process_info.cc(359)] UncheckedAllocate
+[1224/131428.444:ERROR:directory_reader_win.cc(43)] FindFirstFile: ╰参тぃ﹚隔畖 (0x3)
+[1224/131428.470:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\chieh\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\6ef07704-c5cd-4850-a0de-ae4622e44f7a: ╰参тぃ﹚隔畖 (0x3)
